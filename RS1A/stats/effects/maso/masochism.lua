@@ -2,7 +2,7 @@ require "/scripts/util.lua"
 require "/scripts/status.lua"
 
 function init()
-    self.timer = 100
+    self.timer = 500
     self.damageListener = damageListener("damageTaken", function(notifications)
         for _, notification in pairs(notifications) do
             if notification.hitType == "Hit" then
