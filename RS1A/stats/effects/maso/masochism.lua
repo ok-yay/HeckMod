@@ -2,8 +2,7 @@ require "/scripts/util.lua"
 require "/scripts/status.lua"
 
 function init()
-    self.timer = 1000
-    status.setResource("harddmg", 0.0)
+    self.timer = 100
     self.damageListener = damageListener("damageTaken", function(notifications)
         for _, notification in pairs(notifications) do
             if notification.hitType == "Hit" then
@@ -11,6 +10,7 @@ function init()
                     world.sendEntityMessage(entity.id(), "queueRadioMessage", "exploreclueplanet")
 
                     status.setResource("harddmg", status.resource("harddmg") + notification.damageDealt / 6)
+                    self.timer = 100
 
                     world.sendEntityMessage(entity.id(), "queueRadioMessage", "approachingclue")
 
@@ -19,7 +19,6 @@ function init()
                     end
                 end
             end
-            self.timer = 1000
         end
     end)
     script.setUpdateDelta(5)
@@ -33,7 +32,10 @@ function update(dt)
         self.timer = self.timer - 1
     else
         if status.resource("harddmg") > 0 then
-            status.setResource("harddmg", status.resource("harddmg") - 0.01)
+            status.setResource("harddmg", status.resource("harddmg") - 0.1)
+
+        else
+            status.setResource("harddmg", 0)
 
         end
     end
