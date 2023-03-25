@@ -8,7 +8,7 @@
       }
     ]
   },
-  "defaultDuration": 1,
+  "defaultDuration": 0,
   "scripts": [
     "jank.lua"
   ],
