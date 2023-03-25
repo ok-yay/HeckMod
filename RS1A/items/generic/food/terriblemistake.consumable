@@ -5,7 +5,7 @@
     "category": "preparedFood",
     "inventoryIcon": "mistake.png",
     "description": "Only a masochist would dare eat this.",
-    "shortdescription": "Absolutely Terrible",
+    "shortdescription": "Terrible Mistake",
     "effects": [
         [
             "madnessgain",
