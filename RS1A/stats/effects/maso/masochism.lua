@@ -3,6 +3,7 @@ require "/scripts/status.lua"
 
 function init()
     self.timer = 500
+    player.setProperty("healthBonus", -0.5)
     self.damageListener = damageListener("damageTaken", function(notifications)
         for _, notification in pairs(notifications) do
             if notification.hitType == "Hit" then
