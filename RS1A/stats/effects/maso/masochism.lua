@@ -12,7 +12,7 @@ function init()
 
                     status.setResource("harddmg", status.resource("harddmg") + notification.damageDealt / 6)
 
-                    world.sendEntityMessage(entity.id(), "queueRadioMessage", "exploreclueplanet")
+                    world.sendEntityMessage(entity.id(), "queueRadioMessage", "approachingclue")
 
                     if (status.resource("harddmg") > status.resourceMax("health") - 5) then
                         status.setResource("harddmg", status.resource("harddmg") - 5)
