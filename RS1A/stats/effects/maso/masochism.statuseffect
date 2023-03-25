@@ -1,16 +1,22 @@
 {
-  "name" : "masochism",
-  "effectConfig" : {
-  	"healthAmount" : -50
+  "name": "masochism",
+  "effectConfig": {
+    "stats": [
+      {
+        "stat": "healingBonus",
+        "amount": -0.5
+      }
+    ]
   },
-  "defaultDuration" : 1,
-
-  "scripts" : [
+  "defaultDuration": 1,
+  "scripts": [
     "masochism.lua"
   ],
-  "sounds" : {
-    "funny" : [ "/sfx/melee/ultragrill_parry.ogg" ]
+  "sounds": {
+    "funny": [
+      "/sfx/melee/ultragrill_parry.ogg"
+    ]
   },
-  "label" : "Hell",
-  "icon" : "/interface/statuses/hell.png"
+  "label": "Hell",
+  "icon": "/interface/statuses/hell.png"
 }
