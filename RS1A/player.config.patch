@@ -1,6 +1,8 @@
 [
 
 [ { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item" : "parryshield"} } ],
-[ { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item" : "fun"} } ]
+[ { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item" : "fun"} } ],
+[ {"op":"add","path":"/statusControllerSettings/stats/hardDamage","value":{"baseValue":0} }],
+[ {"op":"add","path":"/statusControllerSettings/stats/hell","value":{"baseValue":0} }]
 
 ]

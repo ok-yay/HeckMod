@@ -1,4 +1,4 @@
-local oldInitStatApplier = init -- this is just fu stat applier but again
+local oldInitStatApplier = init -- this is just fu stat applier but again. could've made a thing that is specifically talored around doing the healthbonus down but idgaf
 local oldUninitStatApplier = uninit
 
 function init()
