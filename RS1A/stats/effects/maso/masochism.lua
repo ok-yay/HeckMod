@@ -2,7 +2,7 @@ require "/scripts/util.lua"
 require "/scripts/status.lua"
 
 function init()
-    self.timer = 10000
+    self.timer = 1000
     status.setResource("harddmg", 0.0)
     self.damageListener = damageListener("damageTaken", function(notifications)
         for _, notification in pairs(notifications) do
@@ -19,7 +19,7 @@ function init()
                     end
                 end
             end
-            self.timer = 100
+            self.timer = 1000
         end
     end)
     script.setUpdateDelta(5)
@@ -33,7 +33,7 @@ function update(dt)
         self.timer = self.timer - 1
     else
         if status.resource("harddmg") > 0 then
-            status.setResource("harddmg", status.resource("harddmg") - 0.5)
+            status.setResource("harddmg", status.resource("harddmg") - 0.01)
 
         end
     end
