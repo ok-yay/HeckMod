@@ -6,7 +6,6 @@ function init()
 
     self.aimAngle = 0
     self.aimDirection = 1
-    sb.logInfo(item.matchingDescriptors())
     self.active = false
     self.cooldownTimer = config.getParameter("cooldownTime")
     self.activeTimer = 0
@@ -27,8 +26,6 @@ function init()
 
     self.stances = config.getParameter("stances")
     setStance(self.stances.idle)
-
-    status.addPersistentEffects("maso", {"masochism"}) -- lol
 
     updateAim()
 end
