@@ -10,7 +10,8 @@
   },
   "defaultDuration": 1,
   "scripts": [
-    "masochism.lua"
+    "masochism.lua",
+    "fu_genericStatApplier.lua"
   ],
   "sounds": {
     "funny": [
