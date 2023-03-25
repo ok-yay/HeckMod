@@ -2,7 +2,7 @@ require "/scripts/util.lua"
 require "/scripts/status.lua"
 
 function init()
-    self.timer = 100
+    self.timer = 10000
     status.setResource("harddmg", 0.0)
     self.damageListener = damageListener("damageTaken", function(notifications)
         for _, notification in pairs(notifications) do
