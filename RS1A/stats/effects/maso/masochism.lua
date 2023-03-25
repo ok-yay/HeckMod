@@ -3,17 +3,14 @@ require "/scripts/status.lua"
 
 function init()
     self.timer = 500
-    player.setProperty("healthBonus", -0.5)
+    player.setProperty("healthBonus", -5.0)
     self.damageListener = damageListener("damageTaken", function(notifications)
         for _, notification in pairs(notifications) do
             if notification.hitType == "Hit" then
                 if notification.damageDealt > status.resourceMax("health") / 10 then
-                    world.sendEntityMessage(entity.id(), "queueRadioMessage", "exploreclueplanet")
 
                     status.setResource("harddmg", status.resource("harddmg") + notification.damageDealt / 6)
                     self.timer = 100
-
-                    world.sendEntityMessage(entity.id(), "queueRadioMessage", "approachingclue")
 
                     if (status.resource("harddmg") > status.resourceMax("health") - 5) then
                         status.setResource("harddmg", status.resource("harddmg") - 5)
