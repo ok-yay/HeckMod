@@ -4,7 +4,7 @@ require "/scripts/status.lua"
 function init()
     status.addPersistentEffects("maso", {"masochism"}) --yeahh
     world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismPrepareThyself")
-    player.giveItem("parryshield-recipe")
+    player.giveItem("parryshield")
 
 end
 
