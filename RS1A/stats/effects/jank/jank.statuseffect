@@ -1,5 +1,5 @@
 {
-  "name": "masochism",
+  "name": "jank",
   "effectConfig": {
     "stats": [
       {
@@ -17,6 +17,6 @@
       "/sfx/melee/ultragrill_parry.ogg"
     ]
   },
-  "label": "Seriously? THAT?!",
+  "label": "You're going to feel a world of displeasure now.",
   "icon": "/interface/statuses/youweremistaken.png"
 }
