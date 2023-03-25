@@ -1,0 +1,10 @@
+{
+  "input" : [
+	{ "item" : "dirtmaterial", "count" : 15 }
+  ],
+  "output" : {
+    "item" : "parryshield",
+    "count" : 1
+  },
+  "groups" : ["plain", "primitive"]
+}

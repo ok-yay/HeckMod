@@ -1,0 +1,10 @@
+{
+  "itemName" : "fun",
+  "price" : 2000,
+  "rarity" : "Legendary",
+  "category" : "craftingMaterial",
+  "inventoryIcon" : "fun.png",
+  "description" : "Once grief enters your life, it never leaves.",
+  "shortdescription" : "Fun",
+  "itemTags" : [ "reagent" ]
+}

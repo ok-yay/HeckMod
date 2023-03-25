@@ -1,0 +1,16 @@
+{
+  "name" : "masochism",
+  "effectConfig" : {
+  	"healthAmount" : -50
+  },
+  "defaultDuration" : 1,
+
+  "scripts" : [
+    "masochism.lua"
+  ],
+  "sounds" : {
+    "funny" : [ "/sfx/melee/ultragrill_parry.ogg" ]
+  },
+  "label" : "Hell",
+  "icon" : "/interface/statuses/hell.png"
+}

@@ -1,0 +1,10 @@
+{
+  "masochismIntro" : {
+    "type" : "tutorial",
+    "text" : "By the way, there's recently been some issues with you beaming down onto planets. You should still come out in one piece...I think."
+  },
+  "masochismFuckyou" : {
+    "type" : "tutorial",
+    "text" : "You're good at parrying...right?"
+  }
+}
