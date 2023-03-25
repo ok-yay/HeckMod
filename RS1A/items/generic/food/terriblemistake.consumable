@@ -1,0 +1,33 @@
+{
+    "itemName": "terriblemistake",
+    "rarity": "Common",
+    "price": 0,
+    "category": "preparedFood",
+    "inventoryIcon": "mistake.png",
+    "description": "Only a masochist would dare eat this.",
+    "shortdescription": "Absolutely Terrible",
+    "effects": [
+        [
+            "madnessgain",
+            {
+                "effect": "jank",
+                "duration": 0
+            }
+        ]
+    ],
+    "foodValue": 0,
+    "tooltipKind": "food",
+    "builder": "/items/buildscripts/buildfood.lua",
+    "maxStack": 1,
+    "itemAgingScripts": [
+        "/scripts/items/rotting.lua"
+    ],
+    "rottingMultiplier": 0.06,
+    "blockingEffects": [
+        "wellfed",
+        "masochism"
+    ],
+    "radioMessagesOnPickup": [
+        "masochismWarning"
+    ]
+}

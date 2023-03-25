@@ -1,10 +1,14 @@
 {
-  "masochismIntro" : {
-    "type" : "tutorial",
-    "text" : "By the way, there's recently been some issues with you beaming down onto planets. You should still come out in one piece...I think."
+  "masochismFuckyou": {
+    "type": "tutorial",
+    "text": "You're good at parrying...right?"
   },
-  "masochismFuckyou" : {
-    "type" : "tutorial",
-    "text" : "You're good at parrying...right?"
+  "masochismWarning": {
+    "type": "tutorial",
+    "text": "My scanners are detecting that the substance that you've made will ^red;PERMANENTLY^reset; weaken you if you ingest it. I suggest you dispose of it immediately."
+  },
+  "masochismPrepareThyself": {
+    "type": "tutorial",
+    "text": "I hope you realize exactly what you've done. Buckle up, because it's going to be a rough ride from here."
   }
 }

@@ -1,8 +1,29 @@
 [
-
-[ { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item" : "parryshield"} } ],
-[ { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item" : "fun"} } ],
-[ {"op":"add","path":"/statusControllerSettings/stats/hell","value":{"baseValue":0} }],
-[ { "op": "add", "path": "/statusControllerSettings/resources/harddmg","value": { "baseValue": 0 }} ]
-
+    [
+        {
+            "op": "add",
+            "path": "/defaultBlueprints/tier1/-",
+            "value": {
+                "item": "fun"
+            }
+        }
+    ],
+    [
+        {
+            "op": "add",
+            "path": "/statusControllerSettings/stats/hell",
+            "value": {
+                "baseValue": 0
+            }
+        }
+    ],
+    [
+        {
+            "op": "add",
+            "path": "/statusControllerSettings/resources/harddmg",
+            "value": {
+                "baseValue": 0
+            }
+        }
+    ]
 ]

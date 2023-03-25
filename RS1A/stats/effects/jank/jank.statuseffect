@@ -1,0 +1,22 @@
+{
+  "name": "masochism",
+  "effectConfig": {
+    "stats": [
+      {
+        "stat": "healingBonus",
+        "amount": -0.5
+      }
+    ]
+  },
+  "defaultDuration": 1,
+  "scripts": [
+    "jank.lua"
+  ],
+  "sounds": {
+    "funny": [
+      "/sfx/melee/ultragrill_parry.ogg"
+    ]
+  },
+  "label": "Seriously? THAT?!",
+  "icon": "/interface/statuses/youweremistaken.png"
+}
