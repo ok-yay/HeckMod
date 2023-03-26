@@ -4,17 +4,13 @@ require "/scripts/status.lua"
 function init()
     -- testing if update() does anything different
 
-    script.setUpdateDelta(100)
+    status.addPersistentEffects("maso", {"masochism"}) -- yeahh
+    world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismPrepareThyself")
+    world.spawnItem("parryshield", entity.position(), 1)
 
 end
 
 function update(dt)
-    status.addPersistentEffects("maso", {"masochism"}) -- yeahh
-    world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismPrepareThyself")
-    player.giveItem({
-        name = "parryshield",
-        count = 1
-    })
 
 end
 
