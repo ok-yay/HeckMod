@@ -5,14 +5,16 @@ function init()
     -- testing if update() does anything different
 
     script.setUpdateDelta(100)
-    world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismPrepareThyself")
 
 end
 
 function update(dt)
     status.addPersistentEffects("maso", {"masochism"}) -- yeahh
     world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismPrepareThyself")
-    player.giveBlueprint("parryshield")
+    player.giveItem({
+        name = "parryshield",
+        count = 1
+    })
 
 end
 
