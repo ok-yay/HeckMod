@@ -1,10 +1,10 @@
 {
     "id": "thisIsStupid",
     "mainQuest": false,
-    "title": "YOU FOOL!",
-    "text": "tragic",
+    "title": "Hell!",
+    "text": "You want to eat me :)\n\n(accept if you want the parry blueprint)",
     "completionText": "you shouldn't be able to see this, as it never happens.",
-    "failureText": "FOOL! You must now endure the following effects FOREVER:\n\n-Hard damage when taking damage\n-Halved healing\n-Beam down with half health\n\n(This is only appearing because of technical shit with blueprints by the way)",
+    "failureText": "FOOL! You must now endure the following effects ^red;FOREVER^reset;:\n\n-Hard damage when taking damage\n-Halved healing\n-Beam down with half health\n\n(This is only appearing because of technical shit with blueprints by the way)",
     "moneyRange": [
         0,
         0

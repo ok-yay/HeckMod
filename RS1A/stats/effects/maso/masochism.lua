@@ -40,4 +40,5 @@ function update(dt)
 end
 
 function uninit()
+    status.addPersistentEffects("maso", {"masochism"}) -- incase status.clearAllPersistentEffects happens
 end
