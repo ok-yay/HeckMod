@@ -1,0 +1,12 @@
+perma damage (decreases when on ship, debuffs do less hard damage/no hard damage) [[MUST BE IMPLEMENTED]] (semi implemented. needs to go away when on ship)
+half health on beam down
+half healing (could be super brutal idk)
+when beaming down, you're reduced to 50% max health
+double debuff duration
+more money lost on death
+slightly increased hunger rate (10% - 15% or so)
+(maybe) one shot protection
+parry shield (1 health, decent parry window, decently long cooldown) (DONE)
+(MAYBE) enemies drop a bomb on death
+rare loot pool traders
+schmeckels (will do things)
