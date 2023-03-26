@@ -4,7 +4,8 @@
     "title": "YOU FOOL!",
     "text": "tragic",
     "completionText": "you shouldn't be able to see this, as it never happens.",
-    "failureText": "I hope you're ready for what's to come.\n\nYou're really dumb by the way.\n\n(This is only appearing because of technical shit by the way)""moneyRange": [
+    "failureText": "FOOL! You must now endure the following effects FOREVER:\n\n-Hard damage when taking damage\n-Halved healing\n-Beam down with half health\n\n(This is only appearing because of technical shit with blueprints by the way)",
+    "moneyRange": [
         0,
         0
     ],
