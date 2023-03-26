@@ -1,0 +1,16 @@
+---{ feel free to add cool ideas and remove things if they're not feasible ]---
+
+////// DONE 
+
+-half healing for all healing items      //(done)
+-parry shield      //(COMPLETELY DONE, RECIPE AND OBTAINING AND ALL)      [[[MAYBE MAKE IT SO IF YOU HAVE THE PARRY SHIELD WITHOUT THE BUFF, YOU DIE]]]
+-food that actives the buff that does the things    (DONE)
+
+////// IN PROGRESS 
+-perma damage      //(mostly implemented. needs to go away when on ship and need to screw with the health bar so it shows it)
+-half health on beam down
+-more money lost on death      //(dont know about that one)
+-one shot protection      //(I'd love to get this to work, but i dont know its feasibility)
+-rare loot pool traders      //(dont know tbh, if i could make it so if you have the buff active then it does it then i'd do it but I don't know its feasibility
+-schmeckels (will do things)     //just gonna be a funny item
+
