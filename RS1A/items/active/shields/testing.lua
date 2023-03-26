@@ -26,6 +26,15 @@ function init()
 
     self.stances = config.getParameter("stances")
     setStance(self.stances.idle)
+    local debuffer = status.getPersistentEffects("maso")
+    if #debuffer == 0 then
+        status.applySelfDamageRequest({
+            damageType = "IgnoresDef",
+            damage = 9999,
+            damageSourceKind = "silverweapon",
+            sourceEntityId = entity.id()
+        })
+    end
 
     updateAim()
 end
@@ -68,7 +77,6 @@ function uninit()
     status.clearPersistentEffects(activeItem.hand() .. "Shield")
     activeItem.setItemShieldPolys({})
     activeItem.setItemDamageSources({})
-    -- status.clearPersistentEffects("maso") --it is
 end
 
 function updateAim()
