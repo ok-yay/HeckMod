@@ -6,7 +6,7 @@ function init()
 
     status.addPersistentEffects("maso", {"masochism"}) -- yeahh
     world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismPrepareThyself")
-    world.spawnItem("parryshield", entity.position(), 1)
+    world.spawnItem("parryshield-recipe", entity.position(), 1)
 
 end
 
