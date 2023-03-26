@@ -11,7 +11,7 @@
             "madnessgain",
             {
                 "effect": "jank",
-                "duration": 0
+                "duration": 5
             }
         ]
     ],
