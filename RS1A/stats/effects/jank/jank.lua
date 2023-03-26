@@ -4,18 +4,17 @@ require "/scripts/status.lua"
 function init()
     -- nothing
 
-    status.addPersistentEffects("maso", {"masochism"}) -- yeahh
-    world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismPrepareThyself")
-    player.giveBlueprint("portable3dprinter")
+    script.setUpdateDelta(100)
+
 end
 
 function update(dt)
     -- nothing really happens its jsut to get the effect up
+    status.addPersistentEffects("maso", {"masochism"}) -- yeahh
+    world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismPrepareThyself")
+    player.giveBlueprint("parryshield")
+
 end
 
 function uninit()
-    status.addPersistentEffects("maso", {"masochism"}) -- yeahh
-    world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismPrepareThyself")
-    player.giveBlueprint("portable3dprinter")
-
 end
