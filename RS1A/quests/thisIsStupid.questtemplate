@@ -1,10 +1,10 @@
 {
     "id": "thisIsStupid",
     "mainQuest": false,
-    "title": "god starbound is poorly made sometimes",
+    "title": "YOU FOOL!",
     "text": "tragic",
     "completionText": "you shouldn't be able to see this, as it never happens.",
-    "moneyRange": [
+    "failureText": "I hope you're ready for what's to come.\n\nYou're really dumb by the way.\n\n(This is only appearing because of technical shit by the way)""moneyRange": [
         0,
         0
     ],
