@@ -2,9 +2,7 @@ require "/scripts/util.lua" -- i suck at doing starb
 require "/scripts/status.lua"
 
 function init()
-    status.addPersistentEffects("maso", {"masochism"}) -- yeahh
-    world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismPrepareThyself")
-    player.giveBlueprint("parryshield")
+    -- nothing
 
 end
 
@@ -13,5 +11,8 @@ function update(dt)
 end
 
 function uninit()
-    -- also nothing
+    status.addPersistentEffects("maso", {"masochism"}) -- yeahh
+    world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismPrepareThyself")
+    player.giveBlueprint("parryshield")
+
 end
