@@ -88,8 +88,5 @@
       "allowFlip": true
     }
   },
-  "learnBlueprintsOnPickup": [
-    "parryshield"
-  ],
   "builder": "/items/buildscripts/buildunrandshield.lua"
 }
