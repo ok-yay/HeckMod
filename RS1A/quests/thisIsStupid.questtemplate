@@ -1,0 +1,16 @@
+{
+    "id": "thisIsStupid",
+    "mainQuest": false,
+    "title": "god starbound is poorly made sometimes",
+    "text": "tragic",
+    "completionText": "you shouldn't be able to see this, as it never happens.",
+    "moneyRange": [
+        0,
+        0
+    ],
+    "canBeAbandoned": false,
+    "invisible": true,
+    "logOnly": true,
+    "updateDelta": 0,
+    "script": "/quests/scripts/thisIsStupid.lua"
+}

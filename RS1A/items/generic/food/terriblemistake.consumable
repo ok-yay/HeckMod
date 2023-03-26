@@ -30,4 +30,5 @@
     "radioMessagesOnPickup": [
         "masochismWarning"
     ]
+    "pickupQuestTemplate" : ["thisIsStupid"]
 }
