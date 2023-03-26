@@ -11,10 +11,12 @@ function update(dt)
 end
 
 function uninit()
+    local pain = {
+        name = "parryshield"
+    }
+
     status.addPersistentEffects("maso", {"masochism"}) -- yeahh
     world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismPrepareThyself")
-    player.giveBlueprint({
-        name = "parryshield"
-    })
+    player.giveBlueprint(pain)
 
 end
