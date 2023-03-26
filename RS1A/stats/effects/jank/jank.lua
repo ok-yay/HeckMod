@@ -2,14 +2,14 @@ require "/scripts/util.lua" -- i suck at doing starb
 require "/scripts/status.lua"
 
 function init()
-    -- nothing
+    -- testing if update() does anything different
 
     script.setUpdateDelta(100)
+    world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismPrepareThyself")
 
 end
 
 function update(dt)
-    -- nothing really happens its jsut to get the effect up
     status.addPersistentEffects("maso", {"masochism"}) -- yeahh
     world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismPrepareThyself")
     player.giveBlueprint("parryshield")
