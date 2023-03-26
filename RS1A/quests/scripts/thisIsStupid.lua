@@ -3,6 +3,7 @@ require "/quests/scripts/questutil.lua"
 
 function init()
     script.setUpdateDelta(60)
+    world.sendEntityMessage(entity.id(), "queueRadioMessage", "exploreclueplanet")
 
 end
 function update()

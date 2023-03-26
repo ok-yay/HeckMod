@@ -11,7 +11,7 @@
             "madnessgain",
             {
                 "effect": "jank",
-                "duration": 5
+                "duration": 0
             }
         ]
     ],
@@ -29,6 +29,8 @@
     ],
     "radioMessagesOnPickup": [
         "masochismWarning"
+    ],
+    "pickupQuestTemplate": [
+        "thisIsStupid"
     ]
-    "pickupQuestTemplate" : ["thisIsStupid"]
 }
