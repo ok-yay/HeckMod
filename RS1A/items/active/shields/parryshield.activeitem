@@ -37,7 +37,8 @@
     }
   },
   "scripts": [
-    "/items/active/shields/shield.lua"
+    "/items/active/shields/shield.lua",
+    "/items/active/shields/testing.lua"
   ],
   "shieldHealthRegen": 0,
   "shieldEnergyRegen": 0,
