@@ -28,10 +28,10 @@ function init()
     setStance(self.stances.idle)
     local debuffer = status.getPersistentEffects("maso")
     if #debuffer == 0 then
+        world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismPrepareThyself")
         status.applySelfDamageRequest({
             damageType = "IgnoresDef",
-            damage = 9999,
-            damageSourceKind = "silverweapon",
+            damage = 1000,
             sourceEntityId = entity.id()
         })
     end
