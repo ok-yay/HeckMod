@@ -11,7 +11,7 @@
     [
         {
             "op": "add",
-            "path": "/statusControllerSettings/stats/hell",
+            "path": "/statusControllerSettings/stats/hellActive",
             "value": {
                 "baseValue": 0
             }

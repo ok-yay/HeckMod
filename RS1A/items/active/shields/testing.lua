@@ -26,15 +26,6 @@ function init()
 
     self.stances = config.getParameter("stances")
     setStance(self.stances.idle)
-    local debuffer = status.getPersistentEffects("maso")
-    if #debuffer == 0 then
-        world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismPrepareThyself")
-        status.applySelfDamageRequest({
-            damageType = "IgnoresDef",
-            damage = 1000,
-            sourceEntityId = entity.id()
-        })
-    end
 
     updateAim()
 end
@@ -107,6 +98,19 @@ function setStance(stance)
 end
 
 function raiseShield()
+    if status.statusProperty("hellActive",0) == 0 then
+        world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismPrepareThyself")
+        status.applySelfDamageRequest({
+            damageType = "IgnoresDef",
+            damage = 1000,
+            sourceEntityId = entity.id()
+        })
+        status.applySelfDamageRequest({
+            damageType = "IgnoresDef",
+            damage = 1000,
+            sourceEntityId = entity.id()
+        }) --incase shield blocks one :)
+    end
     setStance(self.stances.raised)
     animator.setAnimationState("shield", "raised")
     animator.playSound("raiseShield")
