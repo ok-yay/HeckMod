@@ -25,5 +25,15 @@
                 "baseValue": 0
             }
         }
+    ],
+
+
+    [
+        {"op" : "test", "path" : "/genericScriptContexts"},
+        {"op" : "add", "path" : "/genericScriptContexts/remote-interfaces","value" : "/scripts/remoteInterfaces.lua"}
+    ],
+    [
+        {"op" : "test", "path" : "/genericScriptContexts", "inverse" : true },
+        {"op" : "add", "path" : "/deploymentConfig/scripts/-", "value" : "/scripts/remoteInterfaces.lua"}
     ]
 ]
