@@ -28,14 +28,14 @@ function init()
   self.stances = config.getParameter("stances")
   setStance(self.stances.idle)
 
-  animator.setGlobalTag("directives", self.perfectBlockDirectives)
-
   updateAim()
 end
 
 function update(dt, fireMode, shiftHeld)
   self.cooldownTimer = math.max(0, self.cooldownTimer - dt)
-  animator.burstParticleEmitter("perfectBlock")
+
+  animator.setGlobalTag("hand", isNearHand() and "near" or "far")
+
 
   if not self.active
     and fireMode == "primary"
