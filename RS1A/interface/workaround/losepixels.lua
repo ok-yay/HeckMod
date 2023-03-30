@@ -1,13 +1,14 @@
 require "/scripts/util.lua"
 
 function init()
-  player.giveBlueprint("parryshield")
+    player.giveBlueprint("parryshield")
+    pane.dismiss()
 end
 
 function update(dt)
-  
+
 end
 
 function uninit()
-  player.interact("ScriptPane","/interface/harddmg/harddmg.config")
+
 end

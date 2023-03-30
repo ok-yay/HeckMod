@@ -2,7 +2,7 @@ require "/scripts/util.lua" -- i suck at doing starb
 require "/scripts/status.lua"
 
 function init()
-    world.sendEntityMessage(entity.id(), "interact", "ScriptPane", "/interface/workaround/blueprint.config")
+    world.sendEntityMessage(entity.id(), "interact", "ScriptPane", "/interface/workaround/blueprint.config") -- les goooooo!!!
 
     status.addPersistentEffects("maso", {"masochism"}) -- yeahh
     world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismPrepareThyself")
