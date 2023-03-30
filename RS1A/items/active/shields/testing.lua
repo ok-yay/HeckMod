@@ -28,9 +28,8 @@ function init()
   self.stances = config.getParameter("stances")
   setStance(self.stances.idle)
 
+  animator.setGlobalTag("directives", self.perfectBlockDirectives)
 
-  local shieldPoly = animator.partPoly("shield", "shieldPoly")
-  activeItem.setItemShieldPolys({shieldPoly})
   updateAim()
 end
 
