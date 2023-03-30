@@ -35,6 +35,7 @@ end
 
 function update(dt, fireMode, shiftHeld)
   self.cooldownTimer = math.max(0, self.cooldownTimer - dt)
+  animator.burstParticleEmitter("perfectBlock")
 
   if not self.active
     and fireMode == "primary"
