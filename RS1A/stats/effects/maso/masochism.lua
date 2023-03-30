@@ -2,7 +2,7 @@ require "/scripts/util.lua"
 require "/scripts/status.lua"
 
 function init()
-    world.sendEntityMessage(entity.id(),"interact","ScriptPane","/interface/craftingtooltip/craftingtooltip.config")
+    world.sendEntityMessage(entity.id(),"interact","ScriptPane","/interface/harddmg/harddmg.config")
     self.timer = 500
     self.damageListener = damageListener("damageTaken", function(notifications)
         for _, notification in pairs(notifications) do
