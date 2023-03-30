@@ -29,12 +29,14 @@ function init()
   setStance(self.stances.idle)
 
   updateAim()
+
+  status.setPersistentEffects(activeItem.hand().."Shield", {{stat = "shieldHealth", amount = shieldHealth()}})
+
 end
 
 function update(dt, fireMode, shiftHeld)
   self.cooldownTimer = math.max(0, self.cooldownTimer - dt)
 
-  animator.setGlobalTag("hand", isNearHand() and "near" or "far")
 
 
   if not self.active
