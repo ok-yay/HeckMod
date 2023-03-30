@@ -5,7 +5,7 @@
   },
   "masochismWarning": {
     "type": "tutorial",
-    "text": "My scanners are detecting that the \"food\n that you've made will ^red;PERMANENTLY^reset; weaken you if you ingest it. I suggest you dispose of it immediately."
+    "text": "My scanners are detecting that the \"food\" that you've made will ^red;PERMANENTLY^reset; weaken you if you ingest it. I suggest you dispose of it immediately."
   },
   "masochismPrepareThyself": {
     "type": "tutorial",
