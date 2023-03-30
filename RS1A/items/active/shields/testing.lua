@@ -28,6 +28,9 @@ function init()
   self.stances = config.getParameter("stances")
   setStance(self.stances.idle)
 
+
+  local shieldPoly = animator.partPoly("shield", "shieldPoly")
+  activeItem.setItemShieldPolys({shieldPoly})
   updateAim()
 end
 
