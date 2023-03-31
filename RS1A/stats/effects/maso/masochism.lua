@@ -3,16 +3,24 @@ require "/scripts/status.lua"
 
 function init()
     self.timer = 500
+    self.dead = false
     self.damageListener = damageListener("damageTaken", function(notifications)
         for _, notification in pairs(notifications) do
             if notification.hitType == "Hit" then
-                if notification.damageDealt > status.resourceMax("health") / 10 then
+                if (status.resource("health") ~= 0) then
+                    if notification.damageDealt > status.resourceMax("health") / 10 then
 
-                    status.setResource("harddmg", status.resource("harddmg") + notification.damageDealt / 6)
-                    self.timer = 500
+                        status.setResource("harddmg", status.resource("harddmg") + notification.damageDealt / 6)
+                        self.timer = 500
 
-                    if (status.resource("harddmg") > status.resourceMax("health") - 5) then
-                        status.setResource("harddmg", status.resource("harddmg") - 5)
+                        if (status.resource("harddmg") > status.resourceMax("health") - 5) then
+                            status.setResource("harddmg", status.resource("harddmg") - 5)
+                        end
+                    end
+                else
+                    if (!self.dead) then
+                        world.sendEntityMessage(entity.id(), "interact", "ScriptPane", "/interface/workaround/death.config") -- les goooooo!!!
+                        self.dead = true
                     end
                 end
             end
@@ -24,6 +32,9 @@ end
 function update(dt)
     if (status.resource("health") > status.resourceMax("health") - status.resource("harddmg")) then
         status.setResource("health", status.resourceMax("health") - status.resource("harddmg"))
+    end
+    if (self.dead && status.resource("health") > 0) then
+        self.dead = false
     end
     if (self.timer > 0) then
         self.timer = self.timer - 1

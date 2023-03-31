@@ -1,7 +1,8 @@
 require "/scripts/util.lua"
 
 function init()
-    player.giveBlueprint("parryshield")
+    player.consumeCurrency("money", math.floor((player.currency("money")*2)/7))
+    sb.logInfo(player.id() + " the " + player.species() + " is dumb as shit.")
     pane.dismiss()
 end
 
