@@ -15,7 +15,7 @@
             }
         ]
     ],
-    "foodValue": 0,
+    "foodValue": -100,
     "tooltipKind": "food",
     "builder": "/items/buildscripts/buildfood.lua",
     "maxStack": 1,
