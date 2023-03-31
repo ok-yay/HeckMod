@@ -18,7 +18,6 @@ function init()
                         status.setResource("harddmg", status.resource("harddmg") - 5)
                     end
                 end
-<<<<<<< HEAD
             else
                 --[[if (notification.hitType == "kill") then
                     if (not self.dead) then
@@ -27,8 +26,6 @@ function init()
                     end
                 end]]--
                 --world.sendEntityMessage(entity.id(), "queueRadioMessage", "exploreclueplanet")
-=======
->>>>>>> 94cfa37b55fc49aa8f8cf39c750056586a2b5889
             end
         end
     end)
