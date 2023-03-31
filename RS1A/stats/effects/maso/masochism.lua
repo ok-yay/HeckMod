@@ -35,6 +35,7 @@ function update(dt)
     if (status.resource("health") > status.resourceMax("health") - status.resource("harddmg")) then
         status.setResource("health", status.resourceMax("health") - status.resource("harddmg"))
     end
+    --[[
     if (status.resource("health") > 0) then
         if (self.dead) then
             self.dead = false
@@ -46,6 +47,7 @@ function update(dt)
             self.dead = true
         end
     end
+    --]]
     if (self.timer > 0) then
         self.timer = self.timer - 1
     else
@@ -63,9 +65,3 @@ end
 function uninit()
     status.addPersistentEffects("maso", {"masochism"}) -- incase status.clearAllPersistentEffects happens
 end
-
-function handleDeath()
-    world.sendEntityMessage(entity.id(), "interact", "ScriptPane", "/interface/workaround/death.config") -- les goooooo!!!
-end
-
-message.setHandler("death", handleDeath)
