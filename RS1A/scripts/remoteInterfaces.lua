@@ -11,4 +11,6 @@ end
 
 function handleDeath()
   world.sendEntityMessage(entity.id(), "interact", "ScriptPane", "/interface/workaround/death.config") -- les goooooo!!!
+  world.sendEntityMessage(entity.id(), "queueRadioMessage", "exploreclueplanet")
+
 end
