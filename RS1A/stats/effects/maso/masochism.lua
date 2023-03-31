@@ -63,3 +63,9 @@ end
 function uninit()
     status.addPersistentEffects("maso", {"masochism"}) -- incase status.clearAllPersistentEffects happens
 end
+
+function handleDeath()
+    world.sendEntityMessage(entity.id(), "interact", "ScriptPane", "/interface/workaround/death.config") -- les goooooo!!!
+end
+
+message.setHandler("death", handleDeath)
