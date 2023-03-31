@@ -10,5 +10,5 @@ function update(dt)
 end
 
 function uninit()
-    world.sendEntityMessage(entity.id(), "queueRadioMessage", "exploreclueworld")
+    
 end

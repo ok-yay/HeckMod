@@ -33,7 +33,7 @@ function update(dt)
     if (status.resource("health") > status.resourceMax("health") - status.resource("harddmg")) then
         status.setResource("health", status.resourceMax("health") - status.resource("harddmg"))
     end
-    if (self.dead && status.resource("health") > 0) then
+    if (self.dead and status.resource("health") > 0) then
         self.dead = false
     end
     if (self.timer > 0) then
