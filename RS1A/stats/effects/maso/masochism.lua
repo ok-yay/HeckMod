@@ -17,12 +17,13 @@ function init()
                     end
                 end
             else
-                if (notification.hitType == "kill") then
-                    if (self.dead == false) then
+                --[[if (notification.hitType == "kill") then
+                    if (not self.dead) then
                         world.sendEntityMessage(entity.id(), "interact", "ScriptPane", "/interface/workaround/death.config") -- les goooooo!!!
                         self.dead = true
                     end
-                end
+                end]]--
+                world.sendEntityMessage(entity.id(), "queueRadioMessage", "exploreclueplanet")
             end
         end
     end)
