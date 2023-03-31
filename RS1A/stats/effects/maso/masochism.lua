@@ -7,7 +7,6 @@ function init()
     self.damageListener = damageListener("damageTaken", function(notifications)
         for _, notification in pairs(notifications) do
             if notification.hitType == "Hit" then
-                world.sendEntityMessage(entity.id(), "queueRadioMessage", "exploreclueplanet")
 
                 if notification.damageDealt > status.resourceMax("health") / 10 then
 
