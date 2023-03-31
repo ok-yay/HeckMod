@@ -17,7 +17,7 @@ function init()
                     end
                 end
             else
-                if (notification.hitType == "Kill") then
+                if (notification.hitType == "kill") then
                     if (self.dead == false) then
                         world.sendEntityMessage(entity.id(), "interact", "ScriptPane", "/interface/workaround/death.config") -- les goooooo!!!
                         self.dead = true
