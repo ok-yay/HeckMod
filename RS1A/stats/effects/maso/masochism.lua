@@ -25,7 +25,7 @@ function init()
                         self.dead = true
                     end
                 end]]--
-                world.sendEntityMessage(entity.id(), "queueRadioMessage", "exploreclueplanet")
+                --world.sendEntityMessage(entity.id(), "queueRadioMessage", "exploreclueplanet")
             end
         end
     end)
