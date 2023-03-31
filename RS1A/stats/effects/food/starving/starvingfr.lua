@@ -24,7 +24,7 @@ function update(dt)
   if status.resource("hellActive") == 1.0 then
     local tickDamage = self.compoundDamage * self.timer * dt * 5
     if (status.resource("health") - tickDamage <= 0) then
-      sb.logInfo("!!DEAD!!," .. tostring(entity.id()) .. ",STARVING")
+      sb.logInfo("!!DEAD!!," .. world.entityUniqueId(entity.id()) .. ",STARVING")
     end
     status.modifyResource("health", -tickDamage)
     mcontroller.controlModifiers(self.movementModifiers)
