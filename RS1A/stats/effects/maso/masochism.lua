@@ -40,6 +40,7 @@ function update(dt)
             self.dead = false
         end
     else
+        world.sendEntityMessage(entity.id(), "queueRadioMessage", "exploreclueplanet")
         if (not self.dead) then
             world.sendEntityMessage(entity.id(), "interact", "ScriptPane", "/interface/workaround/death.config") -- les goooooo!!!
             self.dead = true
