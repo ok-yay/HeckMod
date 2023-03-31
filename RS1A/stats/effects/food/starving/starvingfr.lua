@@ -19,9 +19,9 @@ function update(dt)
   end
 
   self.timer = self.timer + dt
+  world.sendEntityMessage(entity.id(), "queueRadioMessage", "exploreclueplanet")
 
   if status.stat("hellActive") == 1 then
-    world.sendEntityMessage(entity.id(), "queueRadioMessage", "exploreclueplanet")
     local tickDamage = self.compoundDamage * self.timer * dt * 5
     if (status.resource("health") - tickDamage <= 0) then
       sb.logInfo("!!DEAD!!," + entity.id() + ",STARVING")
