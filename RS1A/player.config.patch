@@ -37,12 +37,17 @@
             "value": "/scripts/remoteInterfaces.lua"
         }
     ],
-    //help me lord
+    //YOU CANT USE ANY OTHER FUCKING MODS IT WILL BREAK!!!!!!
     [
         {
+            "op": "test",
+            "path": "/statusControllerSettings/primaryScriptSources/6",
+            "value": "/scripts/fumm_player_primary.lua"
+        },
+        {
             "op": "replace",
-            "path": "/statusControllerSettings/primaryScriptSources/fumm_player_primary.lua",
+            "path": "/statusControllerSettings/primaryScriptSources/6",
             "value": "/scripts/fumm_butfunny.lua"
         }
-    ]
+    ],
 ]
