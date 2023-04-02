@@ -25,6 +25,7 @@ end
 
 function init()
     mm_timer = 5.0
+    world.sendEntityMessage(entity.id(), "queueRadioMessage", "exploreclueplanet")
     _init()
 end
 
