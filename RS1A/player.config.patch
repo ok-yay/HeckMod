@@ -37,17 +37,11 @@
             "value": "/scripts/remoteInterfaces.lua"
         }
     ],
+    //help me lord
     [
         {
-            "op": "remove",
-            "path": "/statusControllerSettings/primaryScriptSources/-",
-            "value": "/scripts/fumm_player_primary.lua"
-        }
-    ],
-    [
-        {
-            "op": "add",
-            "path": "/statusControllerSettings/primaryScriptSources/-",
+            "op": "replace",
+            "path": "/statusControllerSettings/primaryScriptSources/fumm_player_primary.lua",
             "value": "/scripts/fumm_butfunny.lua"
         }
     ]
