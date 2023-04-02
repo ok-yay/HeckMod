@@ -36,13 +36,6 @@
             "path": "/genericScriptContexts/remote-interfaces",
             "value": "/scripts/remoteInterfaces.lua"
         }
-    ],
-    //YOU CANT USE ANY OTHER FUCKING MODS IT WILL BREAK!!!!!!
-    [
-        {
-            "op": "add",
-            "path": "/statusControllerSettings/primaryScriptSources/-",
-            "value": "/scripts/fumm_butfunny.lua"
-        }
     ]
+    //YOU CANT USE ANY OTHER FUCKING MODS IT WILL BREAK!!!!!!
 ]
