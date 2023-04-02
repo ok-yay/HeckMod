@@ -49,5 +49,41 @@
             "path": "/statusControllerSettings/primaryScriptSources/6",
             "value": "/scripts/fumm_butfunny.lua"
         }
+    ],
+    [
+        {
+            "op": "test",
+            "path": "/statusControllerSettings/primaryScriptSources/7",
+            "value": "/scripts/fumm_player_primary.lua"
+        },
+        {
+            "op": "replace",
+            "path": "/statusControllerSettings/primaryScriptSources/7",
+            "value": "/scripts/fumm_butfunny.lua"
+        }
+    ],
+    [
+        {
+            "op": "test",
+            "path": "/statusControllerSettings/primaryScriptSources/8",
+            "value": "/scripts/fumm_player_primary.lua"
+        },
+        {
+            "op": "replace",
+            "path": "/statusControllerSettings/primaryScriptSources/8",
+            "value": "/scripts/fumm_butfunny.lua"
+        }
+    ],
+    [
+        {
+            "op": "test",
+            "path": "/statusControllerSettings/primaryScriptSources/9",
+            "value": "/scripts/fumm_player_primary.lua"
+        },
+        {
+            "op": "replace",
+            "path": "/statusControllerSettings/primaryScriptSources/9",
+            "value": "/scripts/fumm_butfunny.lua"
+        }
     ]
 ]
