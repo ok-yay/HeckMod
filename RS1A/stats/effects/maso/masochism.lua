@@ -2,7 +2,8 @@ require "/scripts/util.lua"
 require "/scripts/status.lua"
 
 function init()
-    self.timer = 300
+
+    self.timer = 200
     self.dead = false
     self.damageListener = damageListener("damageTaken", function(notifications)
         for _, notification in pairs(notifications) do
@@ -11,14 +12,11 @@ function init()
                 if notification.damageDealt > status.resourceMax("health") / 10 then
 
                     status.setResource("harddmg", status.resource("harddmg") + notification.damageDealt / 6)
-                    self.timer = 300
+                    self.timer = 200
 
                     if (status.resource("harddmg") > status.resourceMax("health") - 5) then
                         status.setResource("harddmg", status.resource("harddmg") - 5)
                     end
-
-                    world.sendEntityMessage(entity.id(), "setBar", "harddamage",
-                        1.0 - (status.resource("harddmg") / status.resourceMax("health")), {255, 0, 0, 150})
 
                 end
             else
@@ -56,9 +54,7 @@ function update(dt)
         self.timer = self.timer - 1
     else
         if status.resource("harddmg") > 0 then
-            status.setResource("harddmg", status.resource("harddmg") - 0.1)
-            world.sendEntityMessage(entity.id(), "setBar", "harddamage",
-                1.0 - (status.resource("harddmg") / status.resourceMax("health")), {255, 0, 0, 150})
+            status.setResource("harddmg", status.resource("harddmg") - 0.3)
 
         else
             status.setResource("harddmg", 0)
@@ -66,6 +62,13 @@ function update(dt)
 
         end
     end
+
+    if (status.resource("harddmg") ~= 0) then -- MAYBE NOT EFFICIENT AT ALL BUT uhhhh idc
+        world.sendEntityMessage(entity.id(), "setBar", "harddamage",
+            1.0 - (status.resource("harddmg") / status.resourceMax("health")), {255, 0, 0, 150})
+
+    end
+
     self.damageListener:update()
 end
 
