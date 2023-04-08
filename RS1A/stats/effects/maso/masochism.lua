@@ -2,7 +2,7 @@ require "/scripts/util.lua"
 require "/scripts/status.lua"
 
 function init()
-    self.timer = 500
+    self.timer = 300
     self.dead = false
     self.damageListener = damageListener("damageTaken", function(notifications)
         for _, notification in pairs(notifications) do
@@ -11,14 +11,14 @@ function init()
                 if notification.damageDealt > status.resourceMax("health") / 10 then
 
                     status.setResource("harddmg", status.resource("harddmg") + notification.damageDealt / 6)
-                    self.timer = 500
+                    self.timer = 300
 
                     if (status.resource("harddmg") > status.resourceMax("health") - 5) then
                         status.setResource("harddmg", status.resource("harddmg") - 5)
                     end
 
                     world.sendEntityMessage(entity.id(), "setBar", "harddamage",
-                        1.0 - (status.resource("harddmg") / status.resourceMax("health")), {100, 100, 100, 150})
+                        1.0 - (status.resource("harddmg") / status.resourceMax("health")), {255, 0, 0, 150})
 
                 end
             else
@@ -57,6 +57,8 @@ function update(dt)
     else
         if status.resource("harddmg") > 0 then
             status.setResource("harddmg", status.resource("harddmg") - 0.1)
+            world.sendEntityMessage(entity.id(), "setBar", "harddamage",
+                1.0 - (status.resource("harddmg") / status.resourceMax("health")), {255, 0, 0, 150})
 
         else
             status.setResource("harddmg", 0)
