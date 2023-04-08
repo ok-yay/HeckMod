@@ -16,6 +16,10 @@ function init()
                     if (status.resource("harddmg") > status.resourceMax("health") - 5) then
                         status.setResource("harddmg", status.resource("harddmg") - 5)
                     end
+
+                    world.sendEntityMessage(entity.id(), "setBar", "harddamage",
+                        1.0 - (status.resource("harddmg") / status.resourceMax("health")), {100, 100, 100, 150})
+
                 end
             else
                 --[[if (notification.hitType == "kill") then
@@ -23,8 +27,8 @@ function init()
                         world.sendEntityMessage(entity.id(), "interact", "ScriptPane", "/interface/workaround/death.config") -- les goooooo!!!
                         self.dead = true
                     end
-                end]]--
-                --world.sendEntityMessage(entity.id(), "queueRadioMessage", "exploreclueplanet")
+                end]] --
+                -- world.sendEntityMessage(entity.id(), "queueRadioMessage", "exploreclueplanet")
             end
         end
     end)
@@ -56,6 +60,7 @@ function update(dt)
 
         else
             status.setResource("harddmg", 0)
+            world.sendEntityMessage(entity.id(), "removeBar", "harddamage")
 
         end
     end
