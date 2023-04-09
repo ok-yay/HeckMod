@@ -11,6 +11,15 @@
     [
         {
             "op": "add",
+            "path": "/defaultBlueprints/tier1/-",
+            "value": {
+                "item": "terriblemistake"
+            }
+        }
+    ],
+    [
+        {
+            "op": "add",
             "path": "/statusControllerSettings/resources/hellActive",
             "value": {
                 "baseValue": 0
