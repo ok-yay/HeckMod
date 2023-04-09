@@ -14,8 +14,8 @@ function init()
                     status.setResource("harddmg", status.resource("harddmg") + notification.damageDealt / 6)
                     self.timer = 200
 
-                    if (status.resource("harddmg") > status.resourceMax("health") - 5) then
-                        status.setResource("harddmg", status.resource("harddmg") - 5)
+                    if (status.resource("harddmg") > status.resourceMax("health") - 10) then
+                        status.setResource("harddmg", status.resource("health") - 10)
                     end
 
                 end
