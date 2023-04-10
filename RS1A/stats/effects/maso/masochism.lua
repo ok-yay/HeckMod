@@ -10,7 +10,7 @@ function init()
             if notification.hitType == "Hit" then
 
 
-                status.setResource("harddmg", status.resource("harddmg") + notification.damageDealt / 5.5)
+                status.setResource("harddmg", status.resource("harddmg") + notification.damageDealt / 4.5)
                 self.timer = 200
 
                 if (status.resource("harddmg") > status.resourceMax("health") - 10) then
