@@ -9,15 +9,12 @@ function init()
         for _, notification in pairs(notifications) do
             if notification.hitType == "Hit" then
 
-                if notification.damageDealt > status.resourceMax("health") / 10 then
 
-                    status.setResource("harddmg", status.resource("harddmg") + notification.damageDealt / 4.5)
-                    self.timer = 200
+                status.setResource("harddmg", status.resource("harddmg") + notification.damageDealt / 5.5)
+                self.timer = 200
 
-                    if (status.resource("harddmg") > status.resourceMax("health") - 10) then
-                        status.setResource("harddmg", status.resource("health") - 10)
-                    end
-
+                if (status.resource("harddmg") > status.resourceMax("health") - 10) then
+                    status.setResource("harddmg", status.resource("health") - 10)
                 end
             end
         end
