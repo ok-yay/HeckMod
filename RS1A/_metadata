@@ -1,9 +1,9 @@
 {
   "author" : "ok yay",
-  "description" : "fixed hard dmg so it should be more punishing :)\nparry shield more cool\n(pain)",
+  "description" : "haed dmg is no longer moronic when dealing with 0 damage",
   "friendlyName" : "heck mod",
   "link" : "steam://url/CommunityFilePage/2960157181",
   "name" : "Heck Mod",
   "steamContentId" : "2960157181",
-  "version" : "1.1.2.1"
+  "version" : "1.1.2.2"
 }

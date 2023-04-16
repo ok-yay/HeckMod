@@ -7,7 +7,7 @@ function init()
     self.dead = false
     self.damageListener = damageListener("damageTaken", function(notifications)
         for _, notification in pairs(notifications) do
-            if notification.hitType == "Hit" then
+            if notification.hitType == "Hit" and notification.damageDealt > 1 then
 
 
                 status.setResource("harddmg", status.resource("harddmg") + notification.damageDealt / 2)
