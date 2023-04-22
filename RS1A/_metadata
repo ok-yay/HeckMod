@@ -1,6 +1,6 @@
 {
   "author" : "ok yay",
-  "description" : "haed dmg is no longer moronic when dealing with 0 damage",
+  "description" : "haed dmg is no longer moronic when hit with 0 dmg",
   "friendlyName" : "heck mod",
   "link" : "steam://url/CommunityFilePage/2960157181",
   "name" : "Heck Mod",
