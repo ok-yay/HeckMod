@@ -14,7 +14,7 @@ function init()
                 self.timer = 200
 
                 if (status.resource("harddmg") > status.resourceMax("health") - 10) then
-                    status.setResource("harddmg", status.resource("health") - 10)
+                    status.setResource("harddmg", status.resourceMax("health") - 10)
                 end
             end
         end
