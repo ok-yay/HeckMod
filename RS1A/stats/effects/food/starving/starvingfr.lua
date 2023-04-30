@@ -19,7 +19,6 @@ function update(dt)
   end
 
   self.timer = self.timer + dt
-  world.sendEntityMessage(entity.id(), "queueRadioMessage", "exploreclueplanet")
 
   if status.resource("hellActive") == 1.0 then
     local tickDamage = self.compoundDamage * self.timer * dt * 5

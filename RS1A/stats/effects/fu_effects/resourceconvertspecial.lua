@@ -48,7 +48,8 @@ function update(dt)
 				end
 			else
 				local delta=math.min(1.0-status.resourcePercentage(resource1),healPercent*dt)/(healPercent*dt)
-				if status.resource(resource1) < status.resourceMax(resource1) - status.resource("harddmg") - 1 then 
+				if status.resource(resource1) < status.resourceMax(resource1) - status.resource("harddmg") - 2 then
+					world.sendEntityMessage(entity.id(), "queueRadioMessage", "exploreclueplanet")
 					if consume(resource2, calcR2(dt*ratio*delta)) then
 						modR1(dt*delta)
 					end
