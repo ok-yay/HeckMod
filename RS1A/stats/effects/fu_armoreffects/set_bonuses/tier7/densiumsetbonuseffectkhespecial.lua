@@ -32,6 +32,7 @@ armorBonus={
 }
 
 function init()
+	status.removeEphemeralEffect("convert_energy-health_10_1-1_inefficientover") --incase someone wearing the armor has it, since the effect still exists in code
 	setSEBonusInit(setName)
 	effectHandlerList.specialHandler=effect.addStatModifierGroup({})
 	effectHandlerList.weaponBonusHandle=effect.addStatModifierGroup({})
