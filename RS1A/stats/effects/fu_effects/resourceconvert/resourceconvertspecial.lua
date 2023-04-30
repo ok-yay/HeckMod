@@ -32,7 +32,6 @@ function init()
 end
 
 function update(dt)
-	world.sendEntityMessage(entity.id(), "queueRadioMessage", "exploreclueplanet")
 	if active then
 		if ratio then
 			if lethal or wasteful then
