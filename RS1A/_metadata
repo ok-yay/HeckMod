@@ -1,10 +1,10 @@
 {
   "author" : "ok yay",
-  "description" : "fixed stuff with desnium eva and precursor protector\n\ni hope at least",
+  "description" : "fixed stuff with desnium eva\n\nnot precursor protector but idgaf rn",
   "friendlyName" : "heck mod",
+  "includes" : ["FrackinUniverse"],
   "link" : "steam://url/CommunityFilePage/2960157181",
   "name" : "Heck Mod",
   "steamContentId" : "2960157181",
-  "version" : "1.1.2.3",
-  "includes" : [ "FrackinUniverse" ]
+  "version" : "1.1.2.3"
 }
