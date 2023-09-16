@@ -11,9 +11,9 @@ function update(dt)
     if (status.resource("health") > status.resourceMax("health") - status.resource("harddmg")) then
         status.setResource("health", status.resourceMax("health") - status.resource("harddmg"))
     end
-    if (self.timer > 0) then
+    if (world.type == "unknown") then
         if status.resource("harddmg") > 0 then
-            status.setResource("harddmg", status.resource("harddmg") - 0.3)
+            status.setResource("harddmg", status.resource("harddmg") - 0.7)
 
         else
             status.setResource("harddmg", 0)

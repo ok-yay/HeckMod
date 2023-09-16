@@ -1,23 +1,22 @@
 {
-  "name": "doubledown",
+  "name": "jank",
   "effectConfig": {
     "stats": [
       {
         "stat": "healingBonus",
-        "amount": -0.9
+        "amount": 0.0
       }
     ]
   },
-  "defaultDuration": 1,
+  "defaultDuration": 0,
   "scripts": [
-    "doubledown.lua",
-    "lazyness.lua"
+    "jank.lua"
   ],
   "sounds": {
     "funny": [
       "/sfx/melee/ultragrill_parry.ogg"
     ]
   },
-  "label": "Doubled Down",
-  "icon": "/interface/statuses/ultrahell.png"
+  "label": "Nice.",
+  "icon": "/interface/statuses/youweremistaken.png"
 }

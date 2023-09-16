@@ -4,13 +4,14 @@
     "price": 0,
     "category": "preparedFood",
     "inventoryIcon": "doubledown.png",
-    "description": "^red;WARNING: THIS ITEM WAS NOT CREATED WITH BEING FUN. CONSUME AT YOUR OWN DISCRETION.^reset;\n\nFor when you can't own up to a mistake.",
-    "shortdescription": "Terrible Mistake",
+    "description": "^red;WARNING: THIS ITEM WAS NOT CREATED WITH BEING FUN. CONSUME AT YOUR OWN DISCRETION.^reset;\n\nOnly a masochist would double down.",
+    "shortdescription": "Double Down",
     "effects": [
         [
             "madnessgain",
+            "insanitynew",
             {
-                "effect": "jank",
+                "effect": "jankTheSecond",
                 "duration": 0
             }
         ]
@@ -22,10 +23,10 @@
     "itemAgingScripts": [
         "/scripts/items/rotting.lua"
     ],
-    "rottingMultiplier": 0.06,
+    "rottingMultiplier": 0.09,
     "blockingEffects": [
         "wellfed",
-        "masochism"
+        "doubledown"
     ],
     "radioMessagesOnPickup": [
         "masochismWhyNot"
