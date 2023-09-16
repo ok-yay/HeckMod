@@ -16,6 +16,7 @@ function update(dt)
     if (status.resource("health") > status.resourceMax("health") - status.resource("harddmg")) then
         status.setResource("health", status.resourceMax("health") - status.resource("harddmg"))
     end
+    sb.logInfo(world.type)
     if (world.type == "unknown") then
         if status.resource("harddmg") > 0 then
             status.setResource("harddmg", status.resource("harddmg") - 0.0)
@@ -23,7 +24,6 @@ function update(dt)
         else
             status.setResource("harddmg", 0)
             world.sendEntityMessage(entity.id(), "removeBar", "harddamage")
-
         end
     end
 end
