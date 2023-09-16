@@ -10,7 +10,7 @@
   },
   "defaultDuration": 0,
   "scripts": [
-    "jank.lua"
+    "jankGood.lua"
   ],
   "sounds": {
     "funny": [
