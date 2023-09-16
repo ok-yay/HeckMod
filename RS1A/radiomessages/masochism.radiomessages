@@ -10,5 +10,21 @@
   "masochismPrepareThyself": {
     "type": "tutorial",
     "text": "I hope you realize exactly what you've done. Buckle up, because it's going to be a rough ride from here."
+  },
+  "masochismPrepareThyself": {
+    "type": "tutorial",
+    "text": "Please. Don't."
+  },
+  "masochismHAHAHAHAHAHAHAHAHA": {
+    "type": "tutorial",
+    "text": "...well I tried..."
+  },
+  "masochismCleanseYourself": {
+    "type": "tutorial",
+    "text": "Eating this will make your life normal again. Please do."
+  },
+  "masochismNotFullyCleansed": {
+    "type": "tutorial",
+    "text": "...seems to have merely gotten rid of one. Maybe eat another?"
   }
 }

@@ -1,0 +1,22 @@
+{
+  "name": "jankTheSecond",
+  "effectConfig": {
+    "stats": [
+      {
+        "stat": "healingBonus",
+        "amount": -0.9
+      }
+    ]
+  },
+  "defaultDuration": 0,
+  "scripts": [
+    "jank.lua"
+  ],
+  "sounds": {
+    "funny": [
+      "/sfx/melee/ultragrill_parry.ogg"
+    ]
+  },
+  "label": "May the lord have mercy upon thee.",
+  "icon": "/interface/statuses/youweremistaken.png"
+}
