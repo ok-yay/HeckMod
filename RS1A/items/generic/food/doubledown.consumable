@@ -1,0 +1,33 @@
+{
+    "itemName": "doubledown",
+    "rarity": "Common",
+    "price": 0,
+    "category": "preparedFood",
+    "inventoryIcon": "doubledown.png",
+    "description": "^red;WARNING: THIS ITEM WAS NOT CREATED WITH BEING FUN. CONSUME AT YOUR OWN DISCRETION.^white;\n\nFor when you can't own up to a mistake.",
+    "shortdescription": "Terrible Mistake",
+    "effects": [
+        [
+            "madnessgain",
+            {
+                "effect": "jank",
+                "duration": 0
+            }
+        ]
+    ],
+    "foodValue": -30,
+    "tooltipKind": "food",
+    "builder": "/items/buildscripts/buildfood.lua",
+    "maxStack": 1,
+    "itemAgingScripts": [
+        "/scripts/items/rotting.lua"
+    ],
+    "rottingMultiplier": 0.06,
+    "blockingEffects": [
+        "wellfed",
+        "masochism"
+    ],
+    "radioMessagesOnPickup": [
+        "masochismWarning"
+    ]
+}
