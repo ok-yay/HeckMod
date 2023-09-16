@@ -5,9 +5,14 @@ function init() --hard dmg doesnt go away nearly as easily this time buckaroo!
 end
 
 function update(dt)
+    if (status.resource("harddmg") ~= 0) then -- MAYBE NOT EFFICIENT AT ALL BUT uhhhh idc
+        world.sendEntityMessage(entity.id(), "setBar", "harddamage",
+            1.0 - (status.resource("harddmg") / status.resourceMax("health")), {255, 0, 0, 150})
+
+    end
     if (tostring(world.type()) == "unknown") then
         if status.resource("harddmg") > 0 then
-            status.setResource("harddmg", status.resource("harddmg") - 0.9)
+            status.setResource("harddmg", status.resource("harddmg") - 0.2)
             status.setResource("health", status.resourceMax("health")-status.resource("harddmg")) --its far clearer whats happenening, since no bar this time around.
 
         else
