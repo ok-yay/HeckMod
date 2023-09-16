@@ -9,8 +9,9 @@
     "effects": [
         [
             "madnessgain",
+            "insanitynew",
             {
-                "effect": "jank",
+                "effect": "jankTheSecond",
                 "duration": 0
             }
         ]

@@ -4,13 +4,13 @@
     "stats": [
       {
         "stat": "healingBonus",
-        "amount": -0.5
+        "amount": -0.9
       }
     ]
   },
   "defaultDuration": 1,
   "scripts": [
-    "masochism.lua",
+    "doubledown.lua",
     "lazyness.lua"
   ],
   "sounds": {
@@ -18,6 +18,6 @@
       "/sfx/melee/ultragrill_parry.ogg"
     ]
   },
-  "label": "Hell",
-  "icon": "/interface/statuses/hell.png"
+  "label": "Doubled Down",
+  "icon": "/interface/statuses/ultrahell.png"
 }

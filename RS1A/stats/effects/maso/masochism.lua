@@ -49,5 +49,7 @@ function update(dt)
 end
 
 function uninit()
-    status.addPersistentEffects("maso", {"masochism"}) -- incase status.clearAllPersistentEffects happens
+    if status.resource("hellActive") == 1.0 then
+        status.addPersistentEffects("maso", {"masochism"}) -- incase status.clearAllPersistentEffects happens
+    end
 end

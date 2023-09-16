@@ -4,7 +4,7 @@
     "price": 0,
     "category": "preparedFood",
     "inventoryIcon": "doubledown.png",
-    "description": "^red;WARNING: THIS ITEM WAS NOT CREATED WITH BEING FUN. CONSUME AT YOUR OWN DISCRETION.^white;\n\nFor when you can't own up to a mistake.",
+    "description": "^red;WARNING: THIS ITEM WAS NOT CREATED WITH BEING FUN. CONSUME AT YOUR OWN DISCRETION.^reset;\n\nFor when you can't own up to a mistake.",
     "shortdescription": "Terrible Mistake",
     "effects": [
         [
@@ -28,6 +28,6 @@
         "masochism"
     ],
     "radioMessagesOnPickup": [
-        "masochismWarning"
+        "masochismWhyNot"
     ]
 }
