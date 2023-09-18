@@ -4,7 +4,7 @@
     "stats": [
       {
         "stat": "healingBonus",
-        "amount": -0.9
+        "amount": -0.5
       }
     ]
   },

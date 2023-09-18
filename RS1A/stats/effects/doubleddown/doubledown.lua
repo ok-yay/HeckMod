@@ -13,7 +13,6 @@ function update(dt)
     if (tostring(world.type()) == "unknown") then
         if status.resource("harddmg") > 0 then
             status.setResource("harddmg", status.resource("harddmg") - 0.2)
-            status.setResource("health", status.resourceMax("health")-status.resource("harddmg")) --its far clearer whats happenening, since no bar this time around.
 
         else
             status.setResource("harddmg", 0)
