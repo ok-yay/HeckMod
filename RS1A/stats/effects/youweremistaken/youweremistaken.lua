@@ -11,16 +11,17 @@ end
 
 function update(dt)
     self.timer = self.timer - 1
-    if (self.timer % 10 <= 5) then
+    if (self.timer % 6 <= 3) then
         effect.setParentDirectives("fade=FF0000=0.5")
     else 
-        effect.setParentDirectives("fade=FFFFFFF=1.0")
+        effect.setParentDirectives("fade=000000=0.0")
     end
 
     if (self.timer<1 and not esploded) then
         if (self.timer==0) then
             animator.stopAllSounds("youidiot1")
             animator.playSound("youidiot2")
+            animator.setSoundVolume("youidiot2",1.0,0)
         else 
             esploded = true --to prevent weird shit
             uninit()
