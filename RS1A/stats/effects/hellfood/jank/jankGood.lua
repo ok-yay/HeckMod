@@ -13,7 +13,7 @@ function init()
         status.modifyResource("hellActive", 0.0)
         status.clearPersistentEffects("maso")
         world.sendEntityMessage(entity.id(), "removeBar", "harddamage")
-    else
+    elseif (status.resource("hellActive") == 0.0)
         status.addEphemeralEffect("youweremistaken") --UNNECESSARY APOLOGY
     end
 end
