@@ -4,7 +4,7 @@
     "price": 0,
     "category": "preparedFood",
     "inventoryIcon": "apology.png",
-    "description": "It's important to own up to your mistakes.",
+    "description": "It's important to own up to your mistakes, ^red;but make sure to only own up to it when it is a mistake.^reset;",
     "shortdescription": "Apology",
     "effects": [
         [
@@ -21,9 +21,10 @@
     "itemAgingScripts": [
         "/scripts/items/rotting.lua"
     ],
-    "rottingMultiplier": 0.0,
+    "rottingMultiplier": 0.01,
     "blockingEffects": [
-        "wellfed"
+        "wellfed",
+        "youweremistaken"
     ],
     "radioMessagesOnPickup": [
         "masochismWhyNot"

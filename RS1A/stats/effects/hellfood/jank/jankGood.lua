@@ -12,7 +12,7 @@ function init()
         status.modifyResource("hellActive", 0.0)
         status.clearPersistentEffects("maso")
     } else {
-        
+        status.addEphemeralEffect("youweremistaken") --UNNECESSARY APOLOGY
     }
 end
 

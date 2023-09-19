@@ -6,7 +6,7 @@ function init()
 end
 
 function uninit()
-    for i=1,10 do --10 times baybeeeeeeeeeeeeeeeeeee
+    for i=1,10 do --just to ensure
         status.applySelfDamageRequest({
             damageType = "IgnoresDef",
             damage = 9999,
@@ -14,4 +14,5 @@ function uninit()
             sourceEntityId = entity.id()
         })
     end
+    world.damageTileArea(entity.position(),5,"foreground",entityPosition(),"blockish",999,50)
 end
