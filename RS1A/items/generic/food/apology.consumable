@@ -9,12 +9,12 @@
     "effects": [
         [
             {
-                "effect": "jank",
+                "effect": "jankGood",
                 "duration": 0
             }
         ]
     ],
-    "foodValue": 1,
+    "foodValue": -1,
     "tooltipKind": "food",
     "builder": "/items/buildscripts/buildfood.lua",
     "maxStack": 1,
@@ -27,6 +27,6 @@
         "youweremistaken"
     ],
     "radioMessagesOnPickup": [
-        "masochismWhyNot"
+        "masochismCleanseYourself"
     ]
 }

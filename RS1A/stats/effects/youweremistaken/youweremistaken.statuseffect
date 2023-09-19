@@ -4,13 +4,7 @@
   "scripts": [
     "youweremistaken.lua"
   ],
-  "animationCustom": {
-    "sounds": {
-      "youweremistaken": [
-        "/sfx/other/youmessedup.ogg"
-      ]
-    }
-  },
+  "animationConfig" : "youweremistaken.animation",
   "label": "YOU WERE MISTAKEN YOU WERE MISTAKEN YOU WERE MISTAKEN YOU WERE MISTAKEN",
   "icon": "/interface/statuses/youweremistaken.png"
 }
