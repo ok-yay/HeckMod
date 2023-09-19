@@ -4,7 +4,7 @@ require "/scripts/status.lua"
 function init()
     animator.playSound("youidiot1") --cruelty squad??????????????????
     script.setUpdateDelta(3)
-    self.timer = 105
+    self.timer = 95
     self.esploded = false
 end
 
