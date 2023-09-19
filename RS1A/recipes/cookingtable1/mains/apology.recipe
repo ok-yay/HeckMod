@@ -1,0 +1,12 @@
+{
+  "input" : [
+	  { "item" : "terriblemistake", "count" : 1 },
+    { "item" : "matterconverter", "count" : 3 }
+
+  ],
+  "output" : {
+    "item" : "apology",
+    "count" : 1
+  },
+  "groups" : [ "craftingfood", "mains" ]
+}

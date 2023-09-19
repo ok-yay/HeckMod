@@ -1,0 +1,14 @@
+{
+  "input" : [
+	{ "item" : "terriblemistake", "count" : 1 },
+    { "item" : "rottenfood", "count" : 5 },
+    { "item" : "bone", "count" : 3 },
+    { "item" : "liquidoil", "count" : 3 }
+
+  ],
+  "output" : {
+    "item" : "doubledown",
+    "count" : 1
+  },
+  "groups" : [ "craftingfood", "mains" ]
+}
