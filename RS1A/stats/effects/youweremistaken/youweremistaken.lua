@@ -3,10 +3,22 @@ require "/scripts/status.lua"
 
 function init()
     animator.playSound("youidiot1") --cruelty squad??????????????????
+    script.setUpdateDelta(3)
+    self.timer = 5.4
+    self.esploded = false
+end
+
+function update(dt)
+    self.timer = self.timer - dt 
+    if (self.timer<0 and esploded == false) then
+        animator.stopAllSounds("youidiot1")
+        animator.playSound("youidiot2") 
+        status.removeEphemeralEffect("youweremistaken")
+        esploded = true
+    end
 end
 
 function uninit()
-    animator.playSound("youidiot2")
     for i=1,10 do --just to ensure
         status.applySelfDamageRequest({
             damageType = "IgnoresDef",

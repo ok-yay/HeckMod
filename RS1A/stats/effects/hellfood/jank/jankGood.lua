@@ -7,10 +7,12 @@ function init()
         status.addPersistentEffects("maso", {"masochism"}) -- no longer necessary POG
         status.modifyResource("hellActive", 1.0)
         status.clearPersistentEffects("butwhy")
+        world.sendEntityMessage(entity.id(), "removeBar", "harddamage")
         world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismNotFullyCleansed")
     elseif (status.resource("hellActive") == 1.0) then
         status.modifyResource("hellActive", 0.0)
         status.clearPersistentEffects("maso")
+        world.sendEntityMessage(entity.id(), "removeBar", "harddamage")
     else
         status.addEphemeralEffect("youweremistaken") --UNNECESSARY APOLOGY
     end
