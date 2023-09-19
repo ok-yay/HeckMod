@@ -2,10 +2,11 @@ require "/scripts/util.lua"
 require "/scripts/status.lua"
 
 function init()
-    animator.playSound("youweremistaken") --cruelty squad??????????????????
+    animator.playSound("youidiot1") --cruelty squad??????????????????
 end
 
 function uninit()
+    animator.playSound("youidiot2")
     for i=1,10 do --just to ensure
         status.applySelfDamageRequest({
             damageType = "IgnoresDef",
@@ -14,5 +15,5 @@ function uninit()
             sourceEntityId = entity.id()
         })
     end
-    world.damageTileArea(entity.position(),5,"foreground",entityPosition(),"blockish",999,50)
+    world.damageTileArea(entity.position(),10,"foreground",entity.position(),"explosive",9999,50)
 end

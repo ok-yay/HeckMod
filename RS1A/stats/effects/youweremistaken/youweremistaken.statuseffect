@@ -1,6 +1,6 @@
 {
   "name": "youweremistaken",
-  "defaultDuration": 5,
+  "defaultDuration": 4,
   "scripts": [
     "youweremistaken.lua"
   ],

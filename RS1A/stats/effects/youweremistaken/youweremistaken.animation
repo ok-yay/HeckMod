@@ -1,5 +1,6 @@
 {
   "sounds" : {
-    "youidiot" : [ "/sfx/other/youweremistaken.ogg" ]
+    "youidiot1" : [ "/sfx/other/messedup1.ogg" ],
+    "youidiot2" : [ "/sfx/other/messedup2.ogg" ],
   }
 }
