@@ -4,17 +4,20 @@ require "/scripts/status.lua"
 function init()
     animator.playSound("youidiot1") --cruelty squad??????????????????
     script.setUpdateDelta(3)
-    self.timer = 5.4
+    self.timer = 105
     self.esploded = false
 end
 
 function update(dt)
-    self.timer = self.timer - dt 
-    if (self.timer<0 and esploded == false) then
-        animator.stopAllSounds("youidiot1")
-        animator.playSound("youidiot2") 
-        status.removeEphemeralEffect("youweremistaken")
-        esploded = true
+    self.timer = self.timer - 1
+    if (self.timer<1 and not esploded) then
+        if (self.timer==0) then
+            animator.stopAllSounds("youidiot1")
+            animator.playSound("youidiot2")
+        else 
+            esploded = true
+            uninit()
+        end
     end
 end
 
