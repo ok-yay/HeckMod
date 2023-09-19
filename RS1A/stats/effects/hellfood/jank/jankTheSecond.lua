@@ -7,7 +7,7 @@ function init()
     status.setResource("harddmg",0)
     world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismHAHAHAHAHAHAHAHAHA")
     --world.spawnItem("parryshield-recipe", entity.position(), 1)
-    status.modifyResource("hellActive", 2.0)
+    status.setResource("hellActive", 2.0)
     status.clearPersistentEffects("maso")
 
 end
