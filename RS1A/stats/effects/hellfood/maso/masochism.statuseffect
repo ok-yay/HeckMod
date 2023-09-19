@@ -1,0 +1,18 @@
+{
+  "name": "masochism",
+  "effectConfig": {
+    "stats": [
+      {
+        "stat": "healingBonus",
+        "amount": -0.5
+      }
+    ]
+  },
+  "defaultDuration": 1,
+  "scripts": [
+    "masochism.lua",
+    "lazyness.lua"
+  ],
+  "label": "Hell",
+  "icon": "/interface/statuses/hell.png"
+}

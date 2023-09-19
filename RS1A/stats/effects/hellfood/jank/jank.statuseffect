@@ -1,0 +1,9 @@
+{
+  "name": "jank",
+  "defaultDuration": 0,
+  "scripts": [
+    "jank.lua"
+  ],
+  "label": "You're going to feel a world of displeasure now.",
+  "icon": "/interface/statuses/scriptpixel.png"
+}

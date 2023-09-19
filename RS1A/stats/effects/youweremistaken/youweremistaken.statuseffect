@@ -1,0 +1,16 @@
+{
+  "name": "youweremistaken",
+  "defaultDuration": 5,
+  "scripts": [
+    "youweremistaken.lua"
+  ],
+  "animationCustom": {
+    "sounds": {
+      "youweremistaken": [
+        "/sfx/other/youmessedup.ogg"
+      ]
+    }
+  },
+  "label": "YOU WERE MISTAKEN!",
+  "icon": "/interface/statuses/youweremistaken.png"
+}

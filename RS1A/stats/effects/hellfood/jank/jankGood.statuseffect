@@ -1,0 +1,9 @@
+{
+  "name": "jankGood",
+  "defaultDuration": 0,
+  "scripts": [
+    "jankGood.lua"
+  ],
+  "label": "Nice.",
+  "icon": "/interface/statuses/scriptpixel.png"
+}
