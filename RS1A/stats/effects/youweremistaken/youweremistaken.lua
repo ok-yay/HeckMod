@@ -30,9 +30,10 @@ function update(dt)
 end
 
 function uninit()
+    world.damageTileArea(entity.position(),10,"foreground",entity.position(),"explosive",9999,50)
     for i=1,10 do --just to ensure
         world.spawnProjectile(
-            "doomexplosion",
+            "mechexplosion",
             mcontroller.position(),
             entity.id(),
             {0, 0},
@@ -46,5 +47,4 @@ function uninit()
             sourceEntityId = entity.id()
         })
     end
-    world.damageTileArea(entity.position(),10,"foreground",entity.position(),"explosive",9999,50)
 end
