@@ -31,6 +31,14 @@ end
 
 function uninit()
     world.damageTileArea(entity.position(),10,"foreground",entity.position(),"explosive",9999,50)
+    world.spawnProjectile(
+        "molotovexplosion",
+        mcontroller.position(),
+        entity.id(),
+        vec2.rotate({1, 0},i),
+        true,
+        {}
+    )
     for i=0,360,18 do
         world.spawnProjectile(
             "molotovflame",
