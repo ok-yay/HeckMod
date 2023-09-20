@@ -32,10 +32,11 @@ end
 
 function uninit()
     local pos = vec2.rotate(entity.position(),0)
+    sb.logInfo(pos[1].." "..pos[2])
     world.damageTileArea(entity.position(),10,"foreground",entity.position(),"explosive",9999,50)
     world.spawnProjectile(
         "molotovexplosion",
-        pos,
+        {pos[1],pos[2]}, --WHY
         entity.id(),
         {0,0},
         true,
@@ -44,7 +45,7 @@ function uninit()
     for i=0,360,18 do
         world.spawnProjectile(
             "molotovflame",
-            pos,
+            {pos[1],pos[2]},
             entity.id(),
             vec2.rotate({1, 0},i),
             true,
