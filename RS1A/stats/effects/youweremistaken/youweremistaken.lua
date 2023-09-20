@@ -31,19 +31,20 @@ function update(dt)
 end
 
 function uninit()
+    local pos = vec2.rotate(entity.position(),0)
     world.damageTileArea(entity.position(),10,"foreground",entity.position(),"explosive",9999,50)
     world.spawnProjectile(
         "molotovexplosion",
-        mcontroller.position(),
+        pos,
         entity.id(),
-        vec2.rotate({1, 0},i),
+        {0,0},
         true,
         {}
     )
     for i=0,360,18 do
         world.spawnProjectile(
             "molotovflame",
-            mcontroller.position(),
+            pos,
             entity.id(),
             vec2.rotate({1, 0},i),
             true,
