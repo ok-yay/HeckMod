@@ -7,15 +7,20 @@ function init()
     script.setUpdateDelta(3)
     self.timer = 95
     self.esploded = false
-    effect.setParentDirectives("fade=FF0000=0.5")
+    effect.setParentDirectives("fade=FF0000=0.1")
+    animator.setLightActive("uhoh", true)
 end
 
 function update(dt)
     self.timer = self.timer - 1
     if (self.timer % 6 <= 3) then
-        effect.setParentDirectives("fade=FF0000=0.5")
+        effect.setParentDirectives("fade=FF0000=0.1")
+        animator.setLightActive("uhoh", true)
+
     else 
         effect.setParentDirectives("fade=000000=0.0")
+        animator.setLightActive("uhoh", false)
+
     end
 
     if (self.timer<1 and not esploded) then

@@ -3,5 +3,13 @@
     "youidiot1" : [ "/sfx/other/messedup1.ogg" ],
     "youidiot2" : [ "/sfx/other/messedup2.ogg" ],
     "youidiot" : [ "/sfx/other/youmessedup.ogg" ]
+  },
+  "lights" : {
+    "uhoh" : {
+      "active" : true,
+      "position" : [0.0, 0.0],
+      "color" : [255, 0, 0],
+      "pointLight" : false
+    }
   }
 }
