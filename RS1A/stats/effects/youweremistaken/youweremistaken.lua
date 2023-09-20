@@ -31,15 +31,17 @@ end
 
 function uninit()
     world.damageTileArea(entity.position(),10,"foreground",entity.position(),"explosive",9999,50)
-    for i=1,10 do --just to ensure
+    for i=0,360,18 do
         world.spawnProjectile(
-            "mechexplosion",
+            "molotovflame",
             mcontroller.position(),
             entity.id(),
-            {0, 0},
+            vec2.rotate({1, 0},i),
             true,
             {}
         )
+    end
+    for i=1,10 do --just to ensure
         status.applySelfDamageRequest({
             damageType = "IgnoresDef",
             damage = 9999,
