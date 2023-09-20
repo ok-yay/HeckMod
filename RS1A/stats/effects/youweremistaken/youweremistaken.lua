@@ -31,6 +31,14 @@ end
 
 function uninit()
     for i=1,10 do --just to ensure
+        world.spawnProjectile(
+            "doomexplosion",
+            mcontroller.position(),
+            entity.id(),
+            {0, 0},
+            true,
+            {}
+        )
         status.applySelfDamageRequest({
             damageType = "IgnoresDef",
             damage = 9999,
