@@ -22,7 +22,7 @@ function update(dt)
         if (self.timer==0) then
             animator.stopAllSounds("youidiot1")
             animator.playSound("youidiot2")
-            animator.setSoundVolume("youidiot2",1.0,0)
+            animator.setSoundVolume("youidiot2",2.0,0)
         else 
             esploded = true --to prevent weird shit
             uninit()
@@ -31,12 +31,11 @@ function update(dt)
 end
 
 function uninit()
-    local pos = vec2.rotate(entity.position(),0)
-    sb.logInfo(pos[1].." "..pos[2])
+    local pos = entity.position()
     world.damageTileArea(entity.position(),10,"foreground",entity.position(),"explosive",9999,50)
     world.spawnProjectile(
         "molotovexplosion",
-        {pos[1],pos[2]}, --WHY
+        pos,
         entity.id(),
         {0,0},
         true,
@@ -45,7 +44,7 @@ function uninit()
     for i=0,360,18 do
         world.spawnProjectile(
             "molotovflame",
-            {pos[1],pos[2]},
+            pos,
             entity.id(),
             vec2.rotate({1, 0},i),
             true,
