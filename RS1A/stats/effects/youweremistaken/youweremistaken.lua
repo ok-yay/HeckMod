@@ -1,5 +1,6 @@
 require "/scripts/util.lua"
 require "/scripts/status.lua"
+require "/scripts/vec2.lua"
 
 function init()
     animator.playSound("youidiot1") --cruelty squad??????????????????
