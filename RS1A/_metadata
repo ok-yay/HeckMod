@@ -1,10 +1,10 @@
 {
   "author" : "ok yay",
-  "description" : "fixed stuff with desnium eva\n\nnot precursor protector but idgaf rn",
+  "description" : "double down and apology are real\n\ndouble down - all damage taken is permanent. only goes away on your ship\napology - gets rid of double double/terrible mistake",
   "friendlyName" : "heck mod",
   "includes" : ["FrackinUniverse"],
   "link" : "steam://url/CommunityFilePage/2960157181",
   "name" : "Heck Mod",
   "steamContentId" : "2960157181",
-  "version" : "1.1.2.3"
+  "version" : "1.1.3.3"
 }
