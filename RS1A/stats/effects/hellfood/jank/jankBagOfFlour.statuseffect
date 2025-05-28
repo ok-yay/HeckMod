@@ -1,0 +1,7 @@
+{
+  "name": "jankBagOfFlour",
+  "defaultDuration": 0,
+  "scripts": [
+    "jankBagOfFlour.lua"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "flourEater",
+  "defaultDuration": 1,
+  "scripts": [
+    "flourEater.lua"
+  ],
+  "label": "Floured Up",
+  "icon": "/interface/statuses/bagofflour.png?scalebicubic=0.5;0.5"
+}
