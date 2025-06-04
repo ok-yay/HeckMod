@@ -1,12 +1,11 @@
 {
     "itemName": "bagofflour",
     "rarity": "Common",
-    "price": 0,
+    "price": 2,
     "category": "preparedFood",
     "inventoryIcon": "bagofflour.png",
-    "description": "\"Dude, you should eat an entire bag of flour!\"
-^yellow;Causes you to be unable to wear any armor at all^reset;
-^red;NOTE: Remove all armor before consumption^reset;",
+    "description": "\"Dude, I'll give you 100 dollars if you eat an entire bag of flour!\"
+^red;Remove everything from the armor slots before consuming",
     "shortdescription": "An Entire Bag of Flour",
     "effects": [
         [

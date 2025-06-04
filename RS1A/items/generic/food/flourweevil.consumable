@@ -1,0 +1,29 @@
+{
+    "itemName": "flourweevil",
+    "rarity": "Common",
+    "price": 100,
+    "category": "preparedFood",
+    "inventoryIcon": "flourweevil.png",
+    "description": "Perfectly edible and helps with too-much-flour disease!
+^green;Allows you to wear armor again^reset;",
+    "shortdescription": "Flour Weevil",
+    "effects": [
+        [
+            {
+                "effect": "jankWeevil",
+                "duration": 0
+            }
+        ]
+    ],
+    "foodValue": 10,
+    "tooltipKind": "food",
+    "builder": "/items/buildscripts/buildfood.lua",
+    "maxStack": 47,
+    "itemAgingScripts": [
+        "/scripts/items/rotting.lua"
+    ],
+    "rottingMultiplier": 1.0,
+    "blockingEffects": [
+        "wellfed"
+    ]
+}

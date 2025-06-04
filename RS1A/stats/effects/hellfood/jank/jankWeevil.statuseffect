@@ -1,0 +1,7 @@
+{
+  "name": "jankWeevil",
+  "defaultDuration": 0,
+  "scripts": [
+    "jankWeevil.lua"
+  ]
+}

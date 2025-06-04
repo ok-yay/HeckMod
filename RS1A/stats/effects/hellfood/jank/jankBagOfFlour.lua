@@ -4,7 +4,9 @@ require "/scripts/status.lua"
 function init()
     --world.spawnItem("parryshield-recipe", entity.position(), 1)
     if (status.resource("flourEater") == 0.0) then
-        status.addPersistentEffects("maso", {"flourEater"}) 
+        world.sendEntityMessage(entity.id(), "interact", "ScriptPane", "/interface/workaround/floureat.config") -- les goooooo!!!
+
+        status.addPersistentEffects("flour", {"flourEater"}) 
         status.setResource("flourEater", 1.0)
         world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismFlourEater")
 
