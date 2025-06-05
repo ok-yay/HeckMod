@@ -37,6 +37,15 @@
     ],
     [
         {
+            "op": "add",
+            "path": "/statusControllerSettings/resources/deathTrack",
+            "value": {
+                "baseValue": 0
+            }
+        }
+    ],
+    [
+        {
             "op": "test",
             "path": "/genericScriptContexts"
         },

@@ -12,10 +12,6 @@
             {
                 "effect": "jank",
                 "duration": 0
-            },
-            {
-                "effect": "deathTracker",
-                "duration": 10
             }
         ]
     ],

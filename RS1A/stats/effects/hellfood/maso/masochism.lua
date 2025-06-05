@@ -23,12 +23,7 @@ function init()
 end
 
 function update(dt)
-    sb.logInfo(status.resource("hellActive"))
-
-    if (status.stat("ballsInYoFace") == 0.0) then
-        sb.logInfo("no vey!!!!")
-        status.addEphemeralEffect("deathTracker",10)
-    end
+    status.setResource("hellActive",1.0)
 
     if (status.resource("health") > status.resourceMax("health") - status.resource("harddmg")) then
         status.setResource("health", status.resourceMax("health") - status.resource("harddmg"))

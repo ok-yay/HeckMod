@@ -7,7 +7,14 @@ function init()
         world.sendEntityMessage(entity.id(), "interact", "ScriptPane", "/interface/workaround/floureat.config") -- les goooooo!!!
 
         status.addPersistentEffects("flour", {"flourEater"}) 
-        status.addEphemeralEffect("deathTracker",10)
+        --tracker must appear AFTER the effect, itll suck dick otherwise!
+        status.setResource("deathTrack",2.0)
+
+        status.removeEphemeralEffect("deathTracker")
+        status.clearPersistentEffects("deathTracking")
+
+        status.addPersistentEffects("deathTracking", {"deathTrackReapplier"})
+
         status.setResource("flourEater", 1.0)
         world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismFlourEater")
 

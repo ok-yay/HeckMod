@@ -13,10 +13,6 @@
             {
                 "effect": "jankTheSecond",
                 "duration": 0
-            },
-            {
-                "effect": "deathTracker",
-                "duration": 10
             }
         ]
     ],

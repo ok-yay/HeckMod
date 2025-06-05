@@ -1,0 +1,9 @@
+{
+  "name": "deathTrackReapplier",
+  "defaultDuration": 10,
+  "scripts": [
+    "deathTrackReapplier.lua"
+  ],
+  "label": "gawls",
+  "icon": "/interface/statuses/youweremistaken.png"
+}

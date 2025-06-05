@@ -6,12 +6,25 @@ function init()
     sb.logInfo(status.resource("hellActive"))
     if (status.resource("hellActive") == 2.0) then
         status.addPersistentEffects("maso", {"masochism"}) -- no longer necessary POG
+
+        status.setResource("deathTrack",2.0)
+
+        status.removeEphemeralEffect("deathTracker")
+        status.clearPersistentEffects("deathTracking")
+
+        status.addPersistentEffects("deathTracking", {"deathTrackReapplier"})
+
         status.setResource("hellActive", 1.0)
         status.clearPersistentEffects("butwhy")
         world.sendEntityMessage(entity.id(), "removeBar", "harddamage")
         world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismNotFullyCleansed")
         sb.logInfo("yessir")
     elseif (status.resource("hellActive") == 1.0) then
+        status.setResource("deathTrack",2.0)
+
+        status.removeEphemeralEffect("deathTracker")
+        status.clearPersistentEffects("deathTracking")
+
         status.setResource("hellActive", 0.0)
         status.clearPersistentEffects("maso")
         world.sendEntityMessage(entity.id(), "removeBar", "harddamage")

@@ -12,9 +12,13 @@ function update(dt)
 end
 
 function uninit()
-    -- this also executes when you leave, gonna have to find a way to prevent that specific thing!
+    --sb.logInfo("ok")
+    -- in terms of jank, this is certainly jank! it also (far as im aware) is very consistent
     if (status.resource("hellActive") > 0.0 or status.resource("flourEater") > 0.0) then --only track if hell is activated
-        sb.logInfo("YOU DIED!!!!!!")
-        --status.addEphemeralEffect("deathTracker",10) -- it DOES detect (hell yeah!) but it doesn't add itself back (boo...)
+        if (status.statusProperty("deathTrack",0.0) == 0.0) then
+            sb.logInfo("Disconnected")
+        elseif (status.statusProperty("deathTrack",0.0) == 1.0) then
+            sb.logInfo("YOU DIED!!!!!! IDIOT!!!!!!!!")
+        end
     end
 end
