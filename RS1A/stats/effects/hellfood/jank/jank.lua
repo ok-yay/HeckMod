@@ -5,12 +5,8 @@ function init()
     world.sendEntityMessage(entity.id(), "interact", "ScriptPane", "/interface/workaround/blueprint.config") -- les goooooo!!!
 
     status.addPersistentEffects("maso", {"masochism"})
-    --tracker must appear AFTER the effect, itll suck dick otherwise!
-    status.setResource("deathTrack",2.0)
-    status.removeEphemeralEffect("deathTracker")
-    status.clearPersistentEffects("deathTracking")
-
-    status.addPersistentEffects("deathTracking", {"deathTrackReapplier"})
+    status.addPersistentEffects("deathTracking", {"deathTracker"})
+    status.setResource("deathTrack",1.0)
 
     world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismPrepareThyself")
     --world.spawnItem("parryshield-recipe", entity.position(), 1)

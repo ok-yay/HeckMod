@@ -1,15 +1,10 @@
-require "/scripts/util.lua" -- i suck at doing starb
+require "/scripts/util.lua"
 require "/scripts/status.lua"
 
 function init()
-    status.addPersistentEffects("butwhy", {"doubledown"}) -- no longer necessary POG
-    --tracker must appear AFTER the effect, itll suck dick otherwise!
-    status.setResource("deathTrack",2.0)
-
-    status.removeEphemeralEffect("deathTracker")
-    status.clearPersistentEffects("deathTracking")
-
-    status.addPersistentEffects("deathTracking", {"deathTrackReapplier"})
+    status.addPersistentEffects("butwhy", {"doubledown"})
+    status.addPersistentEffects("deathTracking", {"deathTracker"})
+    status.setResource("deathTrack",1.0)
 
     world.sendEntityMessage(entity.id(), "removeBar", "harddamage")
     

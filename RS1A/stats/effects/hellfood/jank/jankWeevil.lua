@@ -1,4 +1,4 @@
-require "/scripts/util.lua" -- i suck at doing starb
+require "/scripts/util.lua"
 require "/scripts/status.lua"
 
 function init()

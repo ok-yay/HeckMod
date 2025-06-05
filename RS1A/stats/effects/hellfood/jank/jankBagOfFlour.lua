@@ -1,4 +1,4 @@
-require "/scripts/util.lua" -- i suck at doing starb
+require "/scripts/util.lua"
 require "/scripts/status.lua"
 
 function init()
@@ -7,13 +7,9 @@ function init()
         world.sendEntityMessage(entity.id(), "interact", "ScriptPane", "/interface/workaround/floureat.config") -- les goooooo!!!
 
         status.addPersistentEffects("flour", {"flourEater"}) 
-        --tracker must appear AFTER the effect, itll suck dick otherwise!
-        status.setResource("deathTrack",2.0)
+        status.addPersistentEffects("deathTracking", {"deathTracker"})
+        status.setResource("deathTrack",1.0)
 
-        status.removeEphemeralEffect("deathTracker")
-        status.clearPersistentEffects("deathTracking")
-
-        status.addPersistentEffects("deathTracking", {"deathTrackReapplier"})
 
         status.setResource("flourEater", 1.0)
         world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismFlourEater")

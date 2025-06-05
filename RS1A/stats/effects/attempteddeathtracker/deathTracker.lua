@@ -2,23 +2,16 @@ require "/scripts/util.lua"
 require "/scripts/status.lua"
 
 function init() --hard dmg doesnt go away nearly as easily this time buckaroo!
-    effect.addStatModifierGroup({{stat = "ballsInYoFace", amount = 1}}) --might be possible in json but idrk
+    -- so APPARENT-FUCKING-LY this motherfucking function gets called on death or some shit when you die?????????
+    status.setResource("deathTrack",2.0)
 end
 
 function update(dt)
-    if (effect.duration() < 5.0) then
-        effect.modifyDuration(10.0)
+    if (status.resource("deathTrack") == 0.0 or status.resource("deathTrack") == 2.0) then
+        sb.logInfo("if this is consistent i am actually going to shoot myself")
+        status.setResource("deathTrack",1.0)
     end
 end
 
 function uninit()
-    --sb.logInfo("ok")
-    -- in terms of jank, this is certainly jank! it also (far as im aware) is very consistent
-    if (status.resource("hellActive") > 0.0 or status.resource("flourEater") > 0.0) then --only track if hell is activated
-        if (status.statusProperty("deathTrack",0.0) == 0.0) then
-            sb.logInfo("Disconnected")
-        elseif (status.statusProperty("deathTrack",0.0) == 1.0) then
-            sb.logInfo("YOU DIED!!!!!! IDIOT!!!!!!!!")
-        end
-    end
 end
