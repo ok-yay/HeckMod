@@ -1,0 +1,9 @@
+{
+  "name": "deathTracker",
+  "defaultDuration": 10,
+  "scripts": [
+    "deathTracker.lua"
+  ],
+  "label": "Nuts in yo mouth",
+  "icon": "/interface/statuses/ultrahell.png"
+}

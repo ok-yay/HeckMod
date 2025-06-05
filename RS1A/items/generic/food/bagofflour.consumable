@@ -12,6 +12,10 @@
             {
                 "effect": "jankBagOfFlour",
                 "duration": 0
+            },
+            {
+                "effect": "deathTracker",
+                "duration": 10
             }
         ]
     ],

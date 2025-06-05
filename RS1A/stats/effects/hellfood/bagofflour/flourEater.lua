@@ -6,6 +6,10 @@ function init()
 end
 
 function update(dt)
+    if (status.stat("ballsInYoFace") == 0.0) then
+        sb.logInfo("no vey!!!!")
+        status.addEphemeralEffect("deathTracker",10)
+    end
     if (status.stat("flourWornLegs") == 0.0 or status.stat("flourWornHead") == 0.0 or status.stat("flourWornChest") == 0.0) then
         world.sendEntityMessage(entity.id(), "interact", "ScriptPane", "/interface/workaround/fillarmor.config") -- les goooooo!!!
     end

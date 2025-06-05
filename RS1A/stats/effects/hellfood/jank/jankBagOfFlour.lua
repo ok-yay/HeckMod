@@ -7,6 +7,7 @@ function init()
         world.sendEntityMessage(entity.id(), "interact", "ScriptPane", "/interface/workaround/floureat.config") -- les goooooo!!!
 
         status.addPersistentEffects("flour", {"flourEater"}) 
+        status.addEphemeralEffect("deathTracker",10)
         status.setResource("flourEater", 1.0)
         world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismFlourEater")
 

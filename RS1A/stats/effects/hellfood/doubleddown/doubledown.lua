@@ -5,12 +5,18 @@ function init() --hard dmg doesnt go away nearly as easily this time buckaroo!
 end
 
 function update(dt)
+    -- it may be more efficient to make a separate effect that re-adds the death tracking rather than putting this in everything... oh well!
+    if (status.stat("ballsInYoFace") == 0.0) then
+        sb.logInfo("no vey!!!!")
+        status.addEphemeralEffect("deathTracker",10)
+    end
+
     if (status.resource("harddmg") ~= 0) then -- MAYBE NOT EFFICIENT AT ALL BUT uhhhh idc
         world.sendEntityMessage(entity.id(), "setBar", "harddamage",
             1.0 - (status.resource("harddmg") / status.resourceMax("health")), {255, 0, 0, 150})
 
     end
-    if (tostring(world.type()) == "unknown") then
+    if (tostring(world.type()) == "unknown") then -- your ship is considered unknown lol
         if status.resource("harddmg") > 0 then
             status.setResource("harddmg", status.resource("harddmg") - 0.2)
 
