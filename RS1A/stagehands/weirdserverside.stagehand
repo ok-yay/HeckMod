@@ -1,0 +1,6 @@
+{
+  "type" : "weirdserverside",
+  "scripts" : ["/stagehands/weirdserverside.lua"],
+  "scriptDelta" : 10,
+  "playerThatDied" : "-- Someone --"
+}
