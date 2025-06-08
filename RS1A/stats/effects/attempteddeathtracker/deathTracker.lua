@@ -1,8 +1,9 @@
 require "/scripts/util.lua"
 require "/scripts/status.lua"
 
+-- for CURRENT debugging purposes, ive decided to have it be that the effect is visible; it will not be visible upon release
 
-function init() --hard dmg doesnt go away nearly as easily this time buckaroo!
+function init()
     effect.addStatModifierGroup({{stat = "notDead", amount = 1}})
 end
 

@@ -7,7 +7,7 @@ function init()
     self.timeTilFail = 0
     self.timeSinceInit = 0 -- incase the effect goes away somehow after init
 
-    message.setHandler("ateBagOfFlour", localHandler(ateBagOfFlour))
+    message.setHandler("ateBagOfFlour", localHandler(ateBagOfFlour)) --dont think localHandler actually makes any difference but im not going to change it because it works!
     message.setHandler("fillAllTheArmor", localHandler(fillArmor))
     message.setHandler("giveHeckBlueprints", localHandler(giveHeckBlueprints))
     -- unused but they'll stay for now
@@ -32,37 +32,25 @@ end
 
 function giveHeckBlueprints()
     player.giveBlueprint("parryshield")
-    player.giveBlueprint("doubledown") -- :)
+    player.giveBlueprint("doubledown")
     player.giveBlueprint("apology")
 end
 
 function potentialDeath()
-    -- ensuring that you're still actively doing the thing
-    --[[
-    if (storage.veryActiveTime > 3 and (status.resource("hellActive") > 0.0 or status.resource("flourEater") > 0.0)) then
-        sb.logInfo("ddammm")
-        if (status.stat("notDead") == 0.0) then
-            sb.logInfo("WHERES THE FUCKING")
-            status.addEphemeralEffect("deathTracker",10)
-            self.broYouDied = true
-        end
-    end
-    ]] --epic test rq to see if the timer is even fucking necessary
      if ((status.resource("hellActive") > 0.0 or status.resource("flourEater") > 0.0) and self.timeSinceInit<2) then
-        sb.logInfo("oh my lord. its necessary.")
+        sb.logInfo("Server should soon say that you died")
         self.broYouDied = true
     end
 end
 
 function update()
-    --[[
-    if (self.deathTrack == false) then
-        self.deathTrack = true
-        potentialDeath() -- because it being in init could cause some issues
-
+    if (status.stat("notDead") == 0.0) then
+        potentialDeath()
+        status.addEphemeralEffect("deathTracker",10)
     end
-    ]]--
+
     if (self.broYouDied == true) then
+        sb.logInfo("...any second now it should broadcast it...")
         storage.amountYouHaveDied = (storage.amountYouHaveDied or 0)+1 -- in theory at least
         world.spawnStagehand(entity.position(),"weirdserverside",{
             playerThatDied = world.entityName(entity.id()),
@@ -82,17 +70,13 @@ function update()
     if (self.timeSinceInit<2) then -- since delta 60
         self.timeSinceInit = self.timeSinceInit + 1 -- i assume += exists but im too lazy to actually figure that out
     end
-
-    if (status.stat("notDead") == 0.0) then --this should only really happen if the effect gets cleansed by non-death
-        potentialDeath()
-        status.addEphemeralEffect("deathTracker",10)
-    end
 end
 
 function blowUp() -- hopefully shouldn't need to check in update but i may have to depending on circumstances
     if (status.resource("hellActive") == 0.0 and status.resource("flourEater") == 0.0) then
         quest.fail()
-        sb.logInfo("Getting rid of death-tracking")
+        sb.logInfo("Getting rid of death track quest and effect")
+        status.removeEphemeralEffect("deathTracker")
     end
 end
 
@@ -104,6 +88,10 @@ end
 
 ok so here's as good of an explanation i can give for how this hunk of shit works:
 
-basically ephemeral effects go away on death (or something)
+basically ephemeral effects go away on death and you can cause an effect to constantly increase its own duration 
+so that it never go away on its own. stat modifiers are silly and seem to be a million times more consistent than
+resource (TODO: make it so that flourEater and hellActive are tracked via stat modifiers) so that's pretty neat.
+the reason this is all in a quest is to deal with the inefficiency (and jank) of constantly making scriptpanes to 
+do really anything that required the player table. that, and i also wanted access to the storage table as well.
 
 ]]
