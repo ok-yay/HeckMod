@@ -1,31 +1,31 @@
 require "/scripts/util.lua"
 require "/scripts/status.lua"
 
-local joinedAlready = false -- i might be thinking of this incorrectly but lmao!!!!!
 
 function init() --hard dmg doesnt go away nearly as easily this time buckaroo!
-    -- so APPARENT-FUCKING-LY this motherfucking function gets called on death or some shit when you die?????????
-    status.setResource("deathTrack",2.0)
+    -- so APPARENT-FUCKING-LY this function gets called on death or some shit when you die (or join i guess, there may be others but i cant think of any. might test beaming down and seeing what that does)
+    self.deathTrack = false
+    self.timed = 0
 end
 
 function update(dt)
-    if ((status.resource("deathTrack") == 0.0 or status.resource("deathTrack") == 2.0) and joinedAlready == true) then
-        sb.logInfo("if this is consistent i am actually going to shoot myself")
+    if (deathTrack == false) then
+        deathTrack = true
         stageHandJank()
-        status.setResource("deathTrack",1.0)
     end
-    if (joinedAlready == false) then
-        sb.logInfo("VRO!!!! it could work.")
+    
+    if (status.resource("hellActive") == 0.0 and status.resource("flourEater") == 0.0) then
+        self.timed = self.timed + 1
     end
-    joinedAlready = true
+
+    if (self.timed>5) then
+        status.clearPersistentEffects("deathTracking")
+    end
+
 end
 
 function stageHandJank()
-    world.spawnStagehand(entity.position(),"weirdserverside",{
-        playerThatDied = world.entityName(entity.id()),
-    })
-    
-    
+    world.sendEntityMessage(entity.id(), "perhapsDied")
 end
 
 function uninit()

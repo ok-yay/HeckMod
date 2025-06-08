@@ -4,7 +4,9 @@ require "/scripts/status.lua"
 function init()
     --world.spawnItem("parryshield-recipe", entity.position(), 1)
     if (status.resource("flourEater") == 0.0) then
-        world.sendEntityMessage(entity.id(), "interact", "ScriptPane", "/interface/workaround/floureat.config") -- les goooooo!!!
+        world.sendEntityMessage(entity.id(), "interact", "ScriptPane", "/interface/workaround/givedeathtrack.config")
+
+        world.sendEntityMessage(entity.id(), "ateBagOfFlour")
 
         status.addPersistentEffects("flour", {"flourEater"}) 
         status.addPersistentEffects("deathTracking", {"deathTracker"})

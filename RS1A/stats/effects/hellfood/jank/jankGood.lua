@@ -15,6 +15,8 @@ function init()
         status.setResource("hellActive", 0.0)
         status.clearPersistentEffects("maso")
         world.sendEntityMessage(entity.id(), "removeBar", "harddamage")
+        world.sendEntityMessage(entity.id(), "blowTheHellUp")
+
         sb.logInfo("goddamn")
     elseif (status.resource("hellActive") == 0.0) then
         status.addEphemeralEffect("youweremistaken") --UNNECESSARY APOLOGY
