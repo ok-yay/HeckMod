@@ -23,6 +23,8 @@ function init()
 end
 
 function update(dt)
+    status.setResource("hellActive",1.0)
+
     if (status.resource("health") > status.resourceMax("health") - status.resource("harddmg")) then
         status.setResource("health", status.resourceMax("health") - status.resource("harddmg"))
     end

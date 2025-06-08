@@ -1,6 +1,8 @@
 {
   "name": "flourEater",
   "defaultDuration": 1,
+  "updateDelta" : 30,
+
   "scripts": [
     "flourEater.lua"
   ],

@@ -4,7 +4,7 @@
     "price": 0,
     "category": "preparedFood",
     "inventoryIcon": "doubledown.png",
-    "description": "^red;WARNING: THIS ITEM WAS NOT CREATED WITH BEING FUN. CONSUME AT YOUR OWN DISCRETION.^reset;\nOnly a masochist would double down.",
+    "description": "^red;WARNING: THIS ITEM WAS NOT CREATED WITH FUN IN MIND. CONSUME AT YOUR OWN DISCRETION.^reset;\nOnly a masochist would double down.",
     "shortdescription": "Double Down",
     "effects": [
         [

@@ -10,6 +10,6 @@
     "item" : "flourweevil",
     "count" : 1
   },
-  "groups" : [ "designlab1"],
+  "groups" : [ "designlab1", "psionics"],
   "duration" : 0.1
 }

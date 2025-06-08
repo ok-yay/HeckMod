@@ -1,9 +1,0 @@
-{
-  "name": "triedToRemove",
-  "defaultDuration": 0,
-  "scripts": [
-    "triedToRemove.lua"
-  ],
-  "label": "THE FLOUR IS TOO MUCH",
-  "icon": "/interface/statuses/hell.png"
-}
