@@ -6,7 +6,7 @@ function init()
 
     status.addPersistentEffects("maso", {"masochism"})
     --status.addPersistentEffects("deathTracking", {"deathTracker"})
-    status.addEphemeralEffect("deathTracker",10)
+    status.addEphemeralEffects({{effect = "deathTracker", duration = 5}})
     status.setResource("deathTrack",1.0) -- may not be necessary anymore depending on circumstance
 
     world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismPrepareThyself")
@@ -16,9 +16,7 @@ function init()
 end
 
 function update(dt) -- this does actually run even with an effect length of 0
-    sb.logInfo("ASS IN MY DICK!!!")
     world.sendEntityMessage(entity.id(), "giveHeckBlueprints")
-
 end
 
 function uninit()
