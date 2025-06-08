@@ -6,12 +6,9 @@ function init()
     if (status.resource("flourEater") == 0.0) then
         world.sendEntityMessage(entity.id(), "interact", "ScriptPane", "/interface/workaround/givedeathtrack.config")
 
-        world.sendEntityMessage(entity.id(), "ateBagOfFlour")
-
         status.addPersistentEffects("flour", {"flourEater"}) 
-        status.addPersistentEffects("deathTracking", {"deathTracker"})
+        status.addEphemeralEffect("deathTracker",10) -- these go away upon death :)
         status.setResource("deathTrack",1.0)
-
 
         status.setResource("flourEater", 1.0)
         world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismFlourEater")
@@ -29,8 +26,12 @@ function init()
 end
 
 function update(dt)
+    if (status.resource("flourEater") == 1.0) then
+        world.sendEntityMessage(entity.id(), "ateBagOfFlour")
+    end
 
 end
 
 function uninit()
+    bruh = false
 end

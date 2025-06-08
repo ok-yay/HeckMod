@@ -5,7 +5,7 @@ function init()
     world.sendEntityMessage(entity.id(), "interact", "ScriptPane", "/interface/workaround/givedeathtrack.config")
 
     status.addPersistentEffects("butwhy", {"doubledown"})
-    status.addPersistentEffects("deathTracking", {"deathTracker"}) -- i do wonder if this can cause it to double up, would need to check tbh and i could use status.resource to solve it despite the fact that i hate doing that
+    status.addEphemeralEffect("deathTracker",10)
     status.setResource("deathTrack",1.0)
 
     world.sendEntityMessage(entity.id(), "removeBar", "harddamage")
