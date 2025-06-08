@@ -3,6 +3,6 @@
 require "/scripts/stagehandutil.lua"
 
 function init()
-    sb.logInfo("!!DEATH!! " .. config.getParameter("playerThatDied"))
+    sb.logInfo("!!DEATH!! " .. config.getParameter("playerThatDied") .. "!!AMOUNT DIED!! " .. config.getParameter("amountTheyHaveDied"))
     stagehand.die()
 end

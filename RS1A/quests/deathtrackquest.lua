@@ -3,7 +3,9 @@ require "/scripts/messageutil.lua"
 
 function init()
     self.deathTrack = false
-    self.timed = 0
+    self.broYouDied = false
+    self.timeTilFail = 0
+    self.timeSinceInit = 0 -- incase the effect goes away somehow after init
 
     message.setHandler("ateBagOfFlour", localHandler(ateBagOfFlour))
     message.setHandler("fillAllTheArmor", localHandler(fillArmor))
@@ -11,8 +13,6 @@ function init()
     -- unused but they'll stay for now
     message.setHandler("perhapsDied", localHandler(potentialDeath))
     message.setHandler("blowTheHellUp",localHandler(blowUp))
-    checkInitGap() -- DEFINITELY not from frackin i dont know what you're talking about
-    potentialDeath()
 end
 
 -- could just do lambda or whatever but uhhhh shut up :)
@@ -38,12 +38,19 @@ end
 
 function potentialDeath()
     -- ensuring that you're still actively doing the thing
+    --[[
     if (storage.veryActiveTime > 3 and (status.resource("hellActive") > 0.0 or status.resource("flourEater") > 0.0)) then
+        sb.logInfo("ddammm")
         if (status.stat("notDead") == 0.0) then
-            world.spawnStagehand(entity.position(),"weirdserverside",{
-                playerThatDied = world.entityName(entity.id()),
-            })
+            sb.logInfo("WHERES THE FUCKING")
+            status.addEphemeralEffect("deathTracker",10)
+            self.broYouDied = true
         end
+    end
+    ]] --epic test rq to see if the timer is even fucking necessary
+     if ((status.resource("hellActive") > 0.0 or status.resource("flourEater") > 0.0) and self.timeSinceInit<2) then
+        sb.logInfo("oh my lord. its necessary.")
+        self.broYouDied = true
     end
 end
 
@@ -55,40 +62,48 @@ function update()
 
     end
     ]]--
-    sb.logInfo(storage.veryActiveTime)
-    if (storage.veryActiveTime<10) then -- could use storage here maybe, would have to check of course if the quest gets reinitialized on death
-        storage.veryActiveTime=(storage.veryActiveTime or 0)+1
+    if (self.broYouDied == true) then
+        storage.amountYouHaveDied = (storage.amountYouHaveDied or 0)+1 -- in theory at least
+        world.spawnStagehand(entity.position(),"weirdserverside",{
+            playerThatDied = world.entityName(entity.id()),
+            amountTheyHaveDied = storage.amountYouHaveDied,
+        })
+        self.broYouDied = false
     end
 
     if (status.resource("hellActive") == 0.0 and status.resource("flourEater") == 0.0) then
-        self.timed = self.timed + 1
+        self.timeTilFail = self.timeTilFail + 1
     end
 
-    if (self.timed>5) then
+    if (self.timeTilFail>5) then
         blowUp()
+    end
+
+    if (self.timeSinceInit<2) then -- since delta 60
+        self.timeSinceInit = self.timeSinceInit + 1 -- i assume += exists but im too lazy to actually figure that out
+    end
+
+    if (status.stat("notDead") == 0.0) then --this should only really happen if the effect gets cleansed by non-death
+        potentialDeath()
+        status.addEphemeralEffect("deathTracker",10)
     end
 end
 
 function blowUp() -- hopefully shouldn't need to check in update but i may have to depending on circumstances
     if (status.resource("hellActive") == 0.0 and status.resource("flourEater") == 0.0) then
         quest.fail()
-        sb.logInfo("vro..")
+        sb.logInfo("Getting rid of death-tracking")
     end
 end
 
-
--- shamelessly copied from frackin, like a lot of things in this mod :)
-
-function checkInitGap()
-	--sb.logInfo("storage.activeTime a %s %s",storage.activeTime,storage.lastTime)
-	local currentTime=os.time()
-	storage.someKindOfLastTime=storage.someKindOfLastTime or currentTime
-	local gap=math.abs(currentTime-storage.someKindOfLastTime)
-    sb.logInfo(gap)
-	--sb.logInfo("storage.activeTime b %s %s",storage.activeTime,storage.lastTime)
-	storage.veryActiveTime=((not (gap > 5.0)) and storage.veryActiveTime) or 0 -- if you're loading for longer than 5 seconds you have some fucking issues
-end
-
 function uninit()
-    storage.someKindOfLastTime=os.time()
+
 end
+
+--[[
+
+ok so here's as good of an explanation i can give for how this hunk of shit works:
+
+basically ephemeral effects go away on death (or something)
+
+]]
