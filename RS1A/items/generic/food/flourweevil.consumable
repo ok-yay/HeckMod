@@ -24,6 +24,7 @@
     ],
     "rottingMultiplier": 1.0,
     "blockingEffects": [
-        "wellfed"
+        "wellfed",
+        "pomegranateBlock"
     ]
 }

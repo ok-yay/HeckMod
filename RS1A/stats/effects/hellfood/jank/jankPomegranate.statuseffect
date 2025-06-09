@@ -1,0 +1,7 @@
+{
+  "name": "jankPomegranate",
+  "defaultDuration": 0,
+  "scripts": [
+    "jankPomegranate.lua"
+  ]
+}

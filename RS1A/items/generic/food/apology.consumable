@@ -24,7 +24,8 @@
     "rottingMultiplier": 0.01,
     "blockingEffects": [
         "wellfed",
-        "youweremistaken"
+        "youweremistaken",
+        "pomegranateBlock"
     ],
     "radioMessagesOnPickup": [
         "masochismCleanseYourself"
