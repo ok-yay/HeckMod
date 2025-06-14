@@ -6,6 +6,13 @@
             "value": {
                 "item": "terriblemistake"
             }
+        },
+	{
+            "op": "add",
+            "path": "/defaultBlueprints/tier1/-",
+            "value": {
+                "item": "bagofflour"
+            }
         }
     ],
     [
