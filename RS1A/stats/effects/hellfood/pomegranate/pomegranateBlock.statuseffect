@@ -1,0 +1,9 @@
+{
+  "name": "pomegranateBlock",
+  "defaultDuration": 100,
+  "scripts": [
+    "pomegranateBlock.lua"
+  ],
+  "label": "Bound To Your Mistakes Forever",
+  "icon": "/interface/statuses/trapped.png"
+}

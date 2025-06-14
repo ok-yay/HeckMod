@@ -1,9 +1,15 @@
-require "/scripts/util.lua" -- i suck at doing starb
+require "/scripts/util.lua"
 require "/scripts/status.lua"
 
 function init()
-    status.addPersistentEffects("butwhy", {"doubledown"}) -- no longer necessary POG
+    world.sendEntityMessage(entity.id(), "interact", "ScriptPane", "/interface/workaround/givedeathtrack.config")
+
+    status.addPersistentEffects("butwhy", {"doubledown"})
+    status.addEphemeralEffect("deathTracker",10)
+    status.setResource("deathTrack",1.0)
+
     world.sendEntityMessage(entity.id(), "removeBar", "harddamage")
+    
     status.setResource("harddmg",0)
     world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismHAHAHAHAHAHAHAHAHA")
     --world.spawnItem("parryshield-recipe", entity.position(), 1)

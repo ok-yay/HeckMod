@@ -1,0 +1,29 @@
+{
+    "itemName": "bagofflour",
+    "rarity": "Common",
+    "price": 2,
+    "category": "preparedFood",
+    "inventoryIcon": "bagofflour.png",
+    "description": "\"Dude, I'll give you 100 dollars if you eat an entire bag of flour!\"
+^red;Remove everything from the armor slots before consuming",
+    "shortdescription": "An Entire Bag of Flour",
+    "effects": [
+        [
+            {
+                "effect": "jankBagOfFlour",
+                "duration": 0
+            }
+        ]
+    ],
+    "foodValue": 50,
+    "tooltipKind": "food",
+    "builder": "/items/buildscripts/buildfood.lua",
+    "maxStack": 1,
+    "itemAgingScripts": [
+        "/scripts/items/rotting.lua"
+    ],
+    "rottingMultiplier": 5.00,
+    "blockingEffects": [
+        "wellfed"
+    ]
+}

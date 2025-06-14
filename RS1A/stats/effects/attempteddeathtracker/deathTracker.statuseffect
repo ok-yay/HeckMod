@@ -1,0 +1,10 @@
+{
+  "name": "deathTracker",
+  "defaultDuration": 10,
+  "scripts": [
+    "deathTracker.lua"
+  ],
+  "label": "Perceived",
+  "updateDelta" : 60,
+  "icon": "/interface/statuses/deathwatcher.png"
+}

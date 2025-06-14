@@ -1,0 +1,15 @@
+{
+  "input" : [
+    { "item" : "matterconverter", "count" : 1 },
+    { "item" : "wheat", "count" : 10 },
+    { "item" : "cellmateria", "count" : 2 },
+    { "item" : "fugeneticmaterial", "count" : 12 },
+    { "item" : "bugshell", "count" : 3 }
+  ],
+  "output" : {
+    "item" : "flourweevil",
+    "count" : 1
+  },
+  "groups" : [ "designlab1", "psionics"],
+  "duration" : 0.1
+}

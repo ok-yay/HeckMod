@@ -28,6 +28,24 @@
     ],
     [
         {
+            "op": "add",
+            "path": "/statusControllerSettings/resources/flourEater",
+            "value": {
+                "baseValue": 0
+            }
+        }
+    ],
+    [
+        {
+            "op": "add",
+            "path": "/statusControllerSettings/resources/deathTrack",
+            "value": {
+                "baseValue": 0
+            }
+        }
+    ],
+    [
+        {
             "op": "test",
             "path": "/genericScriptContexts"
         },

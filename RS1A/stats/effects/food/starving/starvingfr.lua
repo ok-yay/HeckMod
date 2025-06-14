@@ -21,7 +21,7 @@ function update(dt)
   self.timer = self.timer + dt
   local tickDamage = self.compoundDamage * self.timer * dt
   if status.resource("hellActive") == 1.0 then
-    tickDamage = tickDamage * 5;
+    tickDamage = tickDamage * 5; --i guess i wanted you to die faster from starving? ok. not sure why but go off me.
   end
   status.modifyResource("health", -tickDamage)
     mcontroller.controlModifiers(self.movementModifiers)

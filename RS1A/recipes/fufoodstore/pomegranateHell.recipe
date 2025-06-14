@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "essence", "count" : 100 }
+  ],
+  "output" : {
+    "item" : "pomegranateHell",
+    "count" : 1
+  },
+  "groups" : [ "fufoodstore", "all", "items", "nouncrafting","norecycling" ]
+}

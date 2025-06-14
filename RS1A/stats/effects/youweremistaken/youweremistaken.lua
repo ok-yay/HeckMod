@@ -7,22 +7,27 @@ function init()
     script.setUpdateDelta(3)
     self.timer = 95
     self.esploded = false
-    effect.setParentDirectives("fade=FF0000=0.5")
+    effect.setParentDirectives("fade=FF0000=0.1")
+    animator.setLightActive("uhoh", true)
 end
 
 function update(dt)
     self.timer = self.timer - 1
     if (self.timer % 6 <= 3) then
-        effect.setParentDirectives("fade=FF0000=0.5")
+        effect.setParentDirectives("fade=FF0000=0.1")
+        animator.setLightActive("uhoh", true)
+
     else 
         effect.setParentDirectives("fade=000000=0.0")
+        animator.setLightActive("uhoh", false)
+
     end
 
     if (self.timer<1 and not esploded) then
         if (self.timer==0) then
             animator.stopAllSounds("youidiot1")
             animator.playSound("youidiot2")
-            animator.setSoundVolume("youidiot2",1.0,0)
+            animator.setSoundVolume("youidiot2",2.0,0)
         else 
             esploded = true --to prevent weird shit
             uninit()
@@ -31,12 +36,11 @@ function update(dt)
 end
 
 function uninit()
-    local pos = vec2.rotate(entity.position(),0)
-    sb.logInfo(pos[1].." "..pos[2])
+    local pos = entity.position()
     world.damageTileArea(entity.position(),10,"foreground",entity.position(),"explosive",9999,50)
     world.spawnProjectile(
         "molotovexplosion",
-        {pos[1],pos[2]}, --WHY
+        pos,
         entity.id(),
         {0,0},
         true,
@@ -45,7 +49,7 @@ function uninit()
     for i=0,360,18 do
         world.spawnProjectile(
             "molotovflame",
-            {pos[1],pos[2]},
+            pos,
             entity.id(),
             vec2.rotate({1, 0},i),
             true,

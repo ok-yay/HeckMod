@@ -1,0 +1,12 @@
+{
+  "input" : [
+	  { "item" : "wheat", "count" : 10 },
+    { "item" : "paper", "count" : 2 }
+
+  ],
+  "output" : {
+    "item" : "bagofflour",
+    "count" : 1
+  },
+  "groups" : [ "craftingfood", "mains" ]
+}

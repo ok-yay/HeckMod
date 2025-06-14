@@ -3,7 +3,5 @@
   "defaultDuration": 0,
   "scripts": [
     "jankTheSecond.lua"
-  ],
-  "label": "May the lord have mercy upon thee.",
-  "icon": "/interface/statuses/scriptpixel.png"
+  ]
 }

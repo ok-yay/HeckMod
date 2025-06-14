@@ -1,0 +1,16 @@
+{
+	"id" : "deathtrackquest",
+	"mainQuest" : true,
+	"showInLog" : false,
+	"showAcceptDialog" : false,
+	"showCompleteDialog" : false,
+	"showFailDialog" : false,
+	"title" : "idk why i need to do this if you're seeing this then something went wrong and i'm sad anyways this attempts to track when you die lol",
+	"text" : "i am going to lose it starbound modding is so ass",
+	"completionText" : "bro? yo ass ain even supposed to SEE this what????????????",
+	"moneyRange" : [0, 0],
+	"rewards" : [[]],
+	"canBeAbandoned" : false,
+	"updateDelta" : 60,
+	"script" : "/quests/deathtrackquest.lua"
+}
