@@ -2,7 +2,6 @@
 require "/scripts/messageutil.lua"
 
 function init()
-    self.deathTrack = false
     self.broYouDied = false
     self.timeTilFail = 0
     self.timeSinceInit = 0 -- incase the effect goes away somehow after init
@@ -13,6 +12,7 @@ function init()
     -- unused but they'll stay for now
     message.setHandler("perhapsDied", localHandler(potentialDeath))
     message.setHandler("blowTheHellUp",localHandler(blowUp))
+    message.setHandler("resetCount",localHandler(resetCount))
 end
 
 -- could just do lambda or whatever but uhhhh shut up :)
@@ -36,15 +36,22 @@ function giveHeckBlueprints()
     player.giveBlueprint("apology")
 end
 
+function resetCount()
+    sb.logInfo("im going to lose it")
+    storage.amountYouHaveDied = nil
+end
+
 function potentialDeath()
-     if ((status.resource("hellActive") > 0.0 or status.resource("flourEater") > 0.0) and self.timeSinceInit<2) then
+    sb.logInfo(tostring(self.timeSinceInit<3 and player.isDeployed() == false and storage.mechStuff == false))
+     if ((status.stat("hellActive") > 0.0 or status.stat("flourEater") > 0.0) and self.timeSinceInit<3 and player.isDeployed() == false and storage.mechStuff == false) then
         sb.logInfo("Server should soon say that you died")
         self.broYouDied = true
     end
 end
 
 function update()
-    if (status.stat("notDead") == 0.0) then
+    storage.mechStuff = (storage.mechStuff or player.isDeployed())  -- if mechStuff isn't being stored/is nill
+    if (status.stat("notDead") == 0.0) then -- readds the effect
         potentialDeath()
         status.addEphemeralEffect("deathTracker",10)
     end
@@ -63,13 +70,14 @@ function update()
         self.timeTilFail = self.timeTilFail + 1
     end
 
-    if (self.timeTilFail>5) then
+    if (self.timeTilFail>10) then
         blowUp()
     end
 
-    if (self.timeSinceInit<2) then -- since delta 60
+    if (self.timeSinceInit<10) then -- since delta 60
         self.timeSinceInit = self.timeSinceInit + 1 -- i assume += exists but im too lazy to actually figure that out
     end
+    storage.mechStuff = player.isDeployed()
 end
 
 function blowUp() -- hopefully shouldn't need to check in update but i may have to depending on circumstances

@@ -3,6 +3,8 @@ require "/scripts/status.lua"
 
 function init()
     --world.spawnItem("parryshield-recipe", entity.position(), 1)
+
+    sb.logInfo(status.resource("flourEater"))
     if (status.resource("flourEater") == 0.0) then
         world.sendEntityMessage(entity.id(), "interact", "ScriptPane", "/interface/workaround/givedeathtrack.config")
 
@@ -14,6 +16,7 @@ function init()
         world.sendEntityMessage(entity.id(), "queueRadioMessage", "masochismFlourEater")
 
     else
+
         status.applySelfDamageRequest({
             damageType = "IgnoresDef",
             damage = 99999,
@@ -26,6 +29,8 @@ function init()
 end
 
 function update(dt)
+    world.sendEntityMessage(entity.id(), "resetCount")
+
     if (status.resource("flourEater") == 1.0) then
         world.sendEntityMessage(entity.id(), "ateBagOfFlour")
     end

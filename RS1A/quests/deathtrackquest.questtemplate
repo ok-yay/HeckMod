@@ -11,6 +11,6 @@
 	"moneyRange" : [0, 0],
 	"rewards" : [[]],
 	"canBeAbandoned" : false,
-	"updateDelta" : 60,
+	"updateDelta" : 10,
 	"script" : "/quests/deathtrackquest.lua"
 }
