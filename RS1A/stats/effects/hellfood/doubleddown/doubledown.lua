@@ -3,6 +3,9 @@ require "/scripts/status.lua"
 
 function init() --hard dmg doesnt go away nearly as easily this time buckaroo!
     --status.setStatusProperty("hellActive",2.0)
+    effect.addStatModifierGroup({{stat = "hellActive", amount = 2}})
+
+    script.setUpdateDelta(5)
 
 end
 

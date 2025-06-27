@@ -2,6 +2,7 @@ require "/scripts/util.lua"
 require "/scripts/status.lua"
 
 function init()
+    effect.addStatModifierGroup({{stat = "hellActive", amount = 1}})
 
     self.timer = 200
     self.dead = false

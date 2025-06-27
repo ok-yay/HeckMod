@@ -2,8 +2,8 @@ require "/scripts/util.lua"
 require "/scripts/status.lua"
 
 function init()
+    effect.addStatModifierGroup({{stat = "flourEater", amount = 1}})
     script.setUpdateDelta(5)
-
 end
 
 function update(dt)
@@ -14,8 +14,7 @@ function update(dt)
 end
 
 function uninit()
-
-    if status.resource("flourEater") == 1.0 then
+    if (status.resource("flourEater") == 1.0) then
         status.addPersistentEffects("flour", {"flourEater"}) -- incase status.clearAllPersistentEffects happens
     end
 end
