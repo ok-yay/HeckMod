@@ -1,10 +1,10 @@
 {
   "author" : "ok yay",
-  "description" : "this just in! new bag of flour item that lets you consume way too much flour and causes you to be unable to equip armor (because of too much flour, obviously)\n\nim going to lose it\n\nbag of flour - just read above im not retyping that\nflour weevil - removes the flour in your stomach, allowing you to wear armor again\npomegranate - causes the active challenges you have to be permanent (bag of flour, terrible mistake, double down), perfect if you despise future you and dont want them to enjoy the game normally (buy it at the science outpost btw)\n\nthat's all ok b\n\n(fixed not being to craft bag of flour as it didnt give you the blueprint by default. i am a fool)",
+  "description" : "this just in! new bag of flour item that lets you consume way too much flour and causes you to be unable to equip armor (because of too much flour, obviously)\n\nmechs are the bane of my existance\n\nbag of flour - just read above im not retyping that\nflour weevil - removes the flour in your stomach, allowing you to wear armor again\npomegranate - causes the active challenges you have to be permanent (bag of flour, terrible mistake, double down), perfect if you despise future you and dont want them to enjoy the game normally (buy it at the science outpost btw)\n\nthat's all ok b\n\n(fixed not being to craft bag of flour as it didnt give you the blueprint by default. i am a fool)",
   "friendlyName" : "heck mod",
   "includes" : ["FrackinUniverse"],
   "link" : "steam://url/CommunityFilePage/2960157181",
   "name" : "Heck Mod",
   "steamContentId" : "2960157181",
-  "version" : "1.2.0.3"
+  "version" : "1.2.0.4"
 }
